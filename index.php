@@ -6,20 +6,5 @@ transitional.dtd">
   
 </head>
 <body>
-
-<?php
-echo '<table>';
-if (is_array($resmio_apiData)){
-	foreach($resmio_apiData as $titel => $value) {
-		echo'<tr>';
-		echo '<th align="left">'.$titel.'</th><th align="left">'.$value.'</th>';
-		echo'</tr>';
-	}
-}
-echo '</table>';
-?>
-
-
-
 </body>
 </html>
