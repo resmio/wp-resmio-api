@@ -284,6 +284,18 @@ function resmio_api_data_update() {
 	</div>
 	<br>
 	<br>
+	<h3>Vorschau Widget und Button</h3>
+	<div class="showBtnWdgt">
+		<div class="showWdgt">
+			<?php 
+			echo $get_api_data["widgetCode"]; 
+			?>
+		</div>
+		<div class="showBtn"><?php 
+			echo $get_api_data["buttonCode"];
+			?>
+		</div>
+    </div>
 	<table class="form-table-inner resmio-api-data-table" cellspacing="0">
 		<tr>
 			<td colspan="2">

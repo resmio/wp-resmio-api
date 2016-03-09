@@ -87,7 +87,13 @@
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options a {
     display: inline-block;
 }
-
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .errorfade {
-
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .showBtnWdgt {
+	margin-top: 50px;
+	margin-bottom: 400px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .showBtn {
+margin-left:330px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .showWdgt {
+float:left;
 }
