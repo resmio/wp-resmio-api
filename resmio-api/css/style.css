@@ -1,0 +1,99 @@
+
+.wp-admin .resmio-admin-menu table.form-table > tbody > tr > th {
+	display: none;
+}
+
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table {
+	width: 100%;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table td {
+	vertical-align: top;
+	padding: 0;
+	border: 0px none;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options h1 {
+	font-size: 34px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table h4 {
+	padding: 5px 5px 5px 5px;
+	margin: 0;
+	font-size: 14px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table tr td:nth-child(1) {
+	vertical-align: middle;
+	width: 25px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table tr.resmio-api-data-entry-row label.resmio-api-input-label,
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table tr.resmio-api-data-entry-row input.resmio-api-input-field {
+	display: inline-block;
+	text-align: right;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table tr.resmio-api-data-entry-row label.resmio-api-input-label {
+	width: 180px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table tr.resmio-api-data-openh-row .resmio-api-input-wrapper-alt-left,
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table tr.resmio-api-data-openh-row .resmio-api-input-wrapper-alt-right,
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table tr.resmio-api-data-openh-row label.resmio-api-input-label,
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table tr.resmio-api-data-openh-row input.resmio-api-input-field {
+	display: inline-block;
+	text-align: right;
+}
+
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table tr.resmio-api-data-openh-row label.resmio-api-input-label {
+	width: 180px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table .resmio-api-data-row-input {
+	margin-left:5px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-float-buttons {
+	margin: 0;
+    padding: 0;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .button-primary {
+	margin-left: 40px;
+	background-color: #555555;
+	text-shadow: none;
+	color: #ffffff;
+	border-color: #555555;
+	margin-top: 14px;
+	box-shadow: none;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-button-update {
+	margin-left: 320px;
+	background-color: #4CAF50;
+	color: #ffffff;
+	border-color: #4CAF50;
+	margin-top: 20px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-button-update-end {
+	margin-left: 540px;
+	background-color: #4CAF50;
+	color: #ffffff;
+	border-color: #4CAF50;
+	margin-top: 20px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .id-input {
+	margin-top:15px;
+	margin-left:10px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .id-info {
+	margin-left: 15px;
+	margin-bottom: -50px;
+}
+
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .id-text {
+	margin-left: 10px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options a {
+    display: inline-block;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .showBtnWdgt {
+	margin-top: 50px;
+	margin-bottom: 400px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .showBtn {
+margin-left:330px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .showWdgt {
+float:left;
+}
