@@ -80,13 +80,18 @@ function initialize_resmio_admin_menu_api_options() {
 }
 add_action( 'admin_init', 'initialize_resmio_admin_menu_api_options' );
 
+add_action('after_setup_theme', 'my_theme_setup');
+function my_theme_setup(){
+    load_theme_textdomain( 'resmio_i18n', get_template_directory() . '/languages' );
+}
+
 /** 
  * Callback function (resmio_admin_menu_api_options -> api_sec_update [Settings-Section]) 
  */
 function api_sec_update_callback() {
 	echo '<a href="https://www.resmio.de"><img src="'. get_stylesheet_directory_uri() .'/resmio-api/img/resmio-logo.png" style="width: 180px;"/></a>';
-	echo '<h3>Einstellungen für resmio API</h3>';
-	echo '<p><b>Im ersten Schritt wird die resmio ID gespeichert und die Daten werden von der resmio API importiert &rArr; 1) API Daten importieren<br>Im zweiten Schritt werden die importierten Daten in die WordPress Einstellungen übernommen &nbsp;&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2) API Daten übernehmen</b><br>Hinweis: vor der Übernahme (Schritt 2) können die importierten Daten manuell geändert werden</p>';
+	echo '<h3>'.__('Einstellungen für resmio API', 'resmio_i18n').'</h3>';
+	echo '<p><b>'.__('Im ersten Schritt wird die resmio ID gespeichert und die Daten werden von der resmio API importiert &rArr; 1) API Daten importieren<br>Im zweiten Schritt werden die importierten Daten in die WordPress Einstellungen übernommen &nbsp;&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2) API Daten übernehmen</b><br>Hinweis: vor der Übernahme (Schritt 2) können die importierten Daten manuell geändert werden', 'resmio_i18n').'</p>';
 }
 
 /**
@@ -96,10 +101,10 @@ function resmio_api_data_update() {
 	$get_api_data = get_transient( 'resmio_api_data_save' );
 	$options = get_option( 'resmio_admin_menu_api_options' );
 	if ( $_REQUEST['saved'] && ( $get_api_data != FALSE )) {
-		echo '<div class="updated fade"><p><strong>resmio API Daten erfolgreich importiert</strong></p></div>';
+		echo '<div class="updated fade"><p><strong>'.__('resmio API Daten erfolgreich importiert', 'resmio_i18n').'</strong></p></div>';
 	}
 	if ( $_REQUEST['update'] ) {
-		echo '<div class="updated fade"><p><strong>Daten der Webseite erfolgreich aktualisiert</strong></p></div>';
+		echo '<div class="updated fade"><p><strong>'.__('Daten der Webseite erfolgreich aktualisiert', 'resmio_i18n').'</strong></p></div>';
 	}
 	?>
 	<form id="resmio-admin-menu-form-api-options" method="post" action="" enctype="multipart/form-data">
@@ -113,7 +118,7 @@ function resmio_api_data_update() {
 	if( $_POST['save']  ) {
 		// if no resmio id set
 		if( (!isset($resmio_api_id)) || ($resmio_api_id == "") ) {
-			echo '<div class="error"><p><strong>resmio ID nicht gespeichert</strong></p></div>';
+			echo '<div class="error"><p><strong>'.__('resmio ID nicht gespeichert', 'resmio_i18n').'</strong></p></div>';
 		}
 		// if resmio id set
 		else {
@@ -221,7 +226,7 @@ function resmio_api_data_update() {
 		
 		// if no resmio id set
 		if( !isset($get_resmio_api_data) ) {
-			echo '<div class="error"><p><strong>resmio ID nicht gespeichert</strong></p></div>';
+			echo '<div class="error"><p><strong>'.__('resmio ID nicht gespeichert', 'resmio_i18n').'</strong></p></div>';
 		}
 		// if resmio id set
 		else {
@@ -257,26 +262,29 @@ function resmio_api_data_update() {
 	if( isset( $options['api_descr_short'] ) ) { $apiDescrShrt = $options['api_descr_short']; } else { $apiDescrShrt = ''; }
 
 	if( $get_api_data == FALSE ):
-	echo '<div class="error fade"><p><strong>Diese ID wurde nicht gefunden</strong></p></div>'; 
-	echo '<p><strong>Noch keine resmio ID? Melden Sie sich <a href="https://www.resmio.com" target="_blank">hier</a> kostenlos an!</strong></p><br>';
+	echo '<div class="error fade"><p><strong>'.__('Ungültige ID', 'resmio_i18n').'</strong></p></div>'; 
+	echo '<p><strong>'.__('Noch keine resmio ID? Melden Sie sich <a href="https://www.resmio.com" target="_blank">hier</a> kostenlos an!', 'resmio_i18n').'</strong></p><br>';
 
 	else: 
 	?>
 	<br>
 	<?php endif; ?>
 	<div class="id-text">
-		<h4 style="float:left;" class="resmio-api-input-label">Gib die ID des Restaurants ein:</h4>
+		<?php
+		echo '<h4 style="float:left;" class="resmio-api-input-label">'.__('Gib die ID des Restaurants ein:', 'resmio_i18n').'</h4>'; ?>
 		<input style="float:left;" class="id-input" size="30" id="resmio-facility-id" name="resmio-facility-id" type="text" value="<?php echo get_option('resmio-facility-id'); ?>" />
 		<div class="resmio-float-buttons-wrapper">
 			<div class="submit resmio-float-buttons">
-				<input name="save" type="submit" class="button-primary" value="1) API Daten importieren	&nbsp;" />
+				<?php
+				echo '<input name="save" type="submit" class="button-primary" value="'.__('1) API Daten importieren	&nbsp;', 'resmio_i18n').'" />'; ?>
 				<input type="hidden" name="action" value="save" />
-				<p><small style="float:left;" class="id-info">resmio ID Beispiel: the-fish</small></p>
+				<?php
+				echo '<p><small style="float:left;" class="id-info">'.__('resmio ID Beispiel: the-fish', 'resmio_i18n').'</small></p>'; ?>
 			</div>
 			<div class="submit resmio-float-buttons">
 				<?php
-				$alert_message = "Bist du dir sicher, dass du die Daten der resmio API übernehmen willst? Die aktuellen Werte werden damit überschrieben!"; ?>
-				<input name="update" type="submit" class="resmio-button-update button" onclick="return confirm('<?php echo $alert_message; ?>')" value="2) API Daten übernehmen" />
+				$alert_message = __("Bist du dir sicher, dass du die Daten der resmio API übernehmen willst? Die aktuellen Werte werden damit überschrieben!", 'resmio_i18n' ); ?>
+				<input name="update" type="submit" class="resmio-button-update button" onclick="return confirm('<?php echo $alert_message; ?>')" value="<?php echo esc_attr(__('2) API Daten übernehmen','resmio_i18n')); ?>" />
 				<input type="hidden" name="action" value="update" />
 			</div>
 			<br>
@@ -284,28 +292,25 @@ function resmio_api_data_update() {
 	</div>
 	<br>
 	<br>
-	<h3>Vorschau Widget und Button</h3>
+	<h3><?php _e('Vorschau Widget und Button', 'resmio_i18n'); ?></h3>
 	<div class="showBtnWdgt">
 		<div class="showWdgt">
-			<?php 
-			echo $get_api_data["widgetCode"]; 
-			?>
+			<?php echo $get_api_data["widgetCode"]; ?>
 		</div>
-		<div class="showBtn"><?php 
-			echo $get_api_data["buttonCode"];
-			?>
+		<div class="showBtn">
+			<?php echo $get_api_data["buttonCode"]; ?>
 		</div>
     </div>
 	<table class="form-table-inner resmio-api-data-table" cellspacing="0">
 		<tr>
 			<td colspan="2">
-				<h3>Restaurantname</h3>
+				<h3><?php _e('Restaurantname', 'resmio_i18n'); ?></h3>
 			</td>
 		</tr>
 		<tr class="resmio-api-data-entry-row">
 			<td colspan="2">
 					<label for="api_restaurant_name" class="resmio-api-input-label">
-						<h4>Name</h4>
+						<h4><?php _e('Name', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_restaurant_name" type="text" size="36" name="resmio_admin_menu_api_options[api_restaurant_name]" value="<?php echo $apiRestName; ?>" />
 			</td>
@@ -319,14 +324,14 @@ function resmio_api_data_update() {
 		</tr>
 		<tr>
 			<td colspan="2">
-				<h3>Adresse</h3>
+				<h3><?php _e('Adresse', 'resmio_i18n'); ?></h3>
 			</td>
 		</tr>
 		<tr class="resmio-api-data-entry-row">
 			<td colspan="2">
 				<div id="resmio-api-address-street-wrapper">
 					<label for="api_address_street" class="resmio-api-input-label">
-						<h4>Straße</h4>
+						<h4><?php _e('Straße', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_address_street" type="text" size="36" name="resmio_admin_menu_api_options[api_address_street]" value="<?php echo $apiAdrStr; ?>" />
 				</div>
@@ -341,7 +346,7 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="resmio-api-address-zip-wrapper">
 					<label for="api_address_zip" class="resmio-api-input-label">
-						<h4>Postleitzahl</h4>
+						<h4><?php _e('Postleitzahl', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_address_zip" type="text" size="8" name="resmio_admin_menu_api_options[api_address_zip]" value="<?php echo $apiAdrZip; ?>" />
 				</div>
@@ -356,7 +361,7 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="resmio-api-address-city-wrapper">
 					<label for="api_address_city" class="resmio-api-input-label">
-						<h4>Ort</h4>
+						<h4><?php _e('Ort', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_address_city" type="text" size="36" name="resmio_admin_menu_api_options[api_address_city]" value="<?php echo $apiAdrCity; ?>" />
 				</div>
@@ -371,14 +376,14 @@ function resmio_api_data_update() {
 		</tr>
 		<tr>
 			<td colspan="2">
-				<h3>Kontakt</h3>
+				<h3><?php _e('Kontakt', 'resmio_i18n'); ?></h3>
 			</td>
 		</tr>
 		<tr class="resmio-api-data-entry-row">
 			<td colspan="2">
 				<div id="resmio-api-contact-phone-wrapper">
 					<label for="api_contact_phone" class="resmio-api-input-label">
-						<h4>Telefon</h4>
+						<h4><?php _e('Telefon', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_contact_phone" type="text" size="36" name="resmio_admin_menu_api_options[api_contact_phone]" value="<?php echo $apiConPho; ?>" />
 				</div>
@@ -393,7 +398,7 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="resmio-api-contact-email-wrapper">
 					<label for="api_contact_email" class="resmio-api-input-label">
-						<h4>E-Mail</h4>
+						<h4><?php _e('E-Mail', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_contact_email" type="text" size="36" name="resmio_admin_menu_api_options[api_contact_email]" value="<?php echo $apiConMail; ?>" />
 				</div>
@@ -408,14 +413,14 @@ function resmio_api_data_update() {
 		</tr>
 		<tr>
 			<td colspan="2">
-				<h3>soziale Plattformen</h3>
+				<h3><?php _e('soziale Plattformen', 'resmio_i18n'); ?></h3>
 			</td>
 		</tr>
 		<tr class="resmio-api-data-entry-row">
 			<td colspan="2">
 				<div id="resmio-api-social-facebook-wrapper">
 					<label for="api_social_facebook" class="resmio-api-input-label">
-						<h4>Facebook (URL)</h4>
+						<h4><?php _e('Facebook (URL)', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_social_facebook" type="text" size="63" name="resmio_admin_menu_api_options[api_social_facebook]" value="<?php echo $apiSocFb; ?>" />
 				</div>
@@ -430,7 +435,7 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="resmio-api-social-google-wrapper">
 					<label for="api_social_google" class="resmio-api-input-label">
-						<h4>Google + (URL)</h4>
+						<h4><?php _e('Google + (URL)', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_social_google" type="text" size="63" name="resmio_admin_menu_api_options[api_social_google]" value="<?php echo $apiSocGplus; ?>" />
 				</div>
@@ -445,20 +450,20 @@ function resmio_api_data_update() {
 		</tr>
 		<tr>
 			<td>
-				<h3>Öffnungszeiten</h3>
+				<h3><?php _e('Öffnungszeiten', 'resmio_i18n'); ?></h3>
 			</td>
 		</tr>
 		<tr class="resmio-api-data-openh-row">
 			<td colspan="2">
-				<div id="api_openh_r2_left_wrapper" class="resmio-api-input-wrapper-alt-left">
+				<div id="api_openh_r1_left_wrapper" class="resmio-api-input-wrapper-alt-left">
 					<label for="api_openh_r1_left" class="resmio-api-input-label">
-						<h4>Tag(e)</h4>
+						<h4><?php _e('Tag(e)', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r1_left" type="text" size="12" name="resmio_admin_menu_api_options[api_openh_r1_left]" value="<?php echo $apiOpenR1L; ?>" />
 				</div>
-				<div id="api_openh_r2_right_wrapper" class="resmio-api-input-wrapper-alt-right">
+				<div id="api_openh_r1_right_wrapper" class="resmio-api-input-wrapper-alt-right">
 					<label for="api_openh_r1_right" class="resmio-api-input-label">
-						<h4>Zeiten</h4>
+						<h4><?php _e('Zeiten', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r1_right" type="text" size="24" name="resmio_admin_menu_api_options[api_openh_r1_right]" value="<?php echo $apiOpenR1R; ?>" />
 				</div>
@@ -473,13 +478,13 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="api_openh_r2_left_wrapper" class="resmio-api-input-wrapper-alt-left">
 					<label for="api_openh_r2_left" class="resmio-api-input-label">
-						<h4>Tag(e)</h4>
+						<h4><?php _e('Tag(e)', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r2_left" type="text" size="12" name="resmio_admin_menu_api_options[api_openh_r2_left]" value="<?php echo $apiOpenR2L; ?>" />
 				</div>
 				<div id="api_openh_r2_right_wrapper" class="resmio-api-input-wrapper-alt-right">
 					<label for="api_openh_r2_right" class="resmio-api-input-label">
-						<h4>Zeiten</h4>
+						<h4><?php _e('Zeiten', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r2_right" type="text" size="24" name="resmio_admin_menu_api_options[api_openh_r2_right]" value="<?php echo $apiOpenR2R; ?>" />
 				</div>
@@ -494,13 +499,13 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="api_openh_r3_left_wrapper" class="resmio-api-input-wrapper-alt-left">
 					<label for="api_openh_r3_left" class="resmio-api-input-label">
-						<h4>Tag(e)</h4>
+						<h4><?php _e('Tag(e)', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r3_left" type="text" size="12" name="resmio_admin_menu_api_options[api_openh_r3_left]" value="<?php echo $apiOpenR3L; ?>" />
 				</div>
 				<div id="api_openh_r3_right_wrapper" class="resmio-api-input-wrapper-alt-right">
 					<label for="api_openh_r3_right" class="resmio-api-input-label">
-						<h4>Zeiten</h4>
+						<h4><?php _e('Zeiten', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r3_right" type="text" size="24" name="resmio_admin_menu_api_options[api_openh_r3_right]" value="<?php echo $apiOpenR3R; ?>" />
 				</div>
@@ -515,13 +520,13 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="api_openh_r4_left_wrapper" class="resmio-api-input-wrapper-alt-left">
 					<label for="api_openh_r4_left" class="resmio-api-input-label">
-						<h4>Tag(e)</h4>
+						<h4><?php _e('Tag(e)', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r4_left" type="text" size="12" name="resmio_admin_menu_api_options[api_openh_r4_left]" value="<?php echo $apiOpenR4L; ?>" />
 				</div>
 				<div id="api_openh_r4_right_wrapper" class="resmio-api-input-wrapper-alt-right">
 					<label for="api_openh_r4_right" class="resmio-api-input-label">
-						<h4>Zeiten</h4>
+						<h4><?php _e('Zeiten', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r4_right" type="text" size="24" name="resmio_admin_menu_api_options[api_openh_r4_right]" value="<?php echo $apiOpenR4R; ?>" />
 				</div>
@@ -536,13 +541,13 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="api_openh_r5_left_wrapper" class="resmio-api-input-wrapper-alt-left">
 					<label for="api_openh_r5_left" class="resmio-api-input-label">
-						<h4>Tag(e)</h4>
+						<h4><?php _e('Tag(e)', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r5_left" type="text" size="12" name="resmio_admin_menu_api_options[api_openh_r5_left]" value="<?php echo $apiOpenR5L; ?>" />
 				</div>
 				<div id="api_openh_r5_right_wrapper" class="resmio-api-input-wrapper-alt-right">
 					<label for="api_openh_r5_right" class="resmio-api-input-label">
-						<h4>Zeiten</h4>
+						<h4><?php _e('Zeiten', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r5_right" type="text" size="24" name="resmio_admin_menu_api_options[api_openh_r5_right]" value="<?php echo $apiOpenR5R; ?>" />
 				</div>
@@ -557,13 +562,13 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="api_openh_r6_left_wrapper" class="resmio-api-input-wrapper-alt-left">
 					<label for="api_openh_r6_left" class="resmio-api-input-label">
-						<h4>Tag(e)</h4>
+						<h4><?php _e('Tag(e)', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r6_left" type="text" size="12" name="resmio_admin_menu_api_options[api_openh_r6_left]" value="<?php echo $apiOpenR6L; ?>" />
 				</div>
 				<div id="api_openh_r6_right_wrapper" class="resmio-api-input-wrapper-alt-right">
 					<label for="api_openh_r6_right" class="resmio-api-input-label">
-						<h4>Zeiten</h4>
+						<h4><?php _e('Zeiten', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r6_right" type="text" size="24" name="resmio_admin_menu_api_options[api_openh_r6_right]" value="<?php echo $apiOpenR6R; ?>" />
 				</div>
@@ -578,13 +583,13 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="api_openh_r7_left_wrapper" class="resmio-api-input-wrapper-alt-left">
 					<label for="api_openh_r7_left" class="resmio-api-input-label">
-						<h4>Tag(e)</h4>
+						<h4><?php _e('Tag(e)', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r7_left" class="resmio-api-input-field-alt" type="text" size="12" name="resmio_admin_menu_api_options[api_openh_r7_left]" value="<?php echo $apiOpenR7L; ?>" />
 				</div>
 				<div id="api_openh_r7_right_wrapper" class="resmio-api-input-wrapper-alt-right">
 					<label for="api_openh_r7_right" class="resmio-api-input-label">
-						<h4>Zeiten</h4>
+						<h4><?php _e('Zeiten', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_openh_r7_right" class="resmio-api-input-field-alt" type="text" size="24" name="resmio_admin_menu_api_options[api_openh_r7_right]" value="<?php echo $apiOpenR7R; ?>" />
 				</div>
@@ -599,13 +604,13 @@ function resmio_api_data_update() {
 		</tr>
 		<tr>
 			<td colspan="2">
-				<h3>Beschreibung</h3>
+				<h3><?php _e('Beschreibung', 'resmio_i18n'); ?></h3>
 			</td>
 		</tr>
 		<tr class="resmio-api-data-2-col resmio-api-data-entry-row">
 			<td class="resmio-api-data-row-label">
 				<label for="api_descr" class="resmio-api-input-label">
-					<h4>Lang (Über uns Text)</h4>
+					<h4><?php _e('Lang', 'resmio_i18n'); ?></h4>
 				</label>
 			</td>
 			<td>
@@ -621,7 +626,7 @@ function resmio_api_data_update() {
 			<td colspan="2">
 				<div id="resmio-api-descr-short-wrapper">
 					<label for="api_descr_short" class="resmio-api-input-label">
-						<h4>Kurz (Intro Text)</h4>
+						<h4><?php _e('Kurz', 'resmio_i18n'); ?></h4>
 					</label>
 					<input id="api_descr_short" type="text" size="63" name="resmio_admin_menu_api_options[api_descr_short]" value="<?php echo $apiDescrShrt; ?>" />
 				</div>
@@ -630,8 +635,8 @@ function resmio_api_data_update() {
 	</table>
 	<div class="submit resmio-float-buttons">
 		<?php
-		$alert_message = "Bist du dir sicher, dass du die Daten der resmio API übernehmen willst? Die aktuellen Werte werden damit überschrieben!"; ?>
-		<input name="update" type="submit" class="resmio-button-update-end button" onclick="return confirm('<?php echo $alert_message; ?>')" value="2) API Daten übernehmen" />
+		$alert_message = __("Bist du dir sicher, dass du die Daten der resmio API übernehmen willst? Die aktuellen Werte werden damit überschrieben!", 'resmio_i18n' ); ?>
+		<input name="update" type="submit" class="resmio-button-update-end button" onclick="return confirm('<?php echo $alert_message; ?>')" value="<?php echo esc_attr(__('2) API Daten übernehmen','resmio_i18n')); ?>" />
 		<input type="hidden" name="action" value="update" />
 	</div>
 <?php
