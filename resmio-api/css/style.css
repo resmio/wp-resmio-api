@@ -97,3 +97,6 @@ margin-left:330px;
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .showWdgt {
 float:left;
 }
+i.resmio-editor-icon { 
+background-image: url('../img/resmio-icon.png');
+}
