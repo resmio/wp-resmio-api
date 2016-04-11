@@ -17,9 +17,9 @@
                 {text: 'E-Mail', onclick: function() {editor.insertContent('[resmio-email]');}},
                 {text: 'Kontakt', onclick: function() {editor.insertContent('[resmio-contact]');}},
                 {text: 'Facebook', onclick: function() {editor.insertContent('[resmio-facebook]');}},
-                {text: 'Google +', onclick: function() {editor.insertContent('[resmio-google]');}},
-                {text: 'Soziale Medien', onclick: function() {editor.insertContent('[resmio-social-media]');}},
-                {text: 'Öffnungszeiten', onclick: function() {editor.insertContent('[resmio-opening-times]');}},
+                {text: 'Google +', onclick: function() {editor.insertContent('[resmio-googleplus]');}},
+                {text: 'Soziale Netzwerke', onclick: function() {editor.insertContent('[resmio-social]');}},
+                {text: 'Öffnungszeiten', onclick: function() {editor.insertContent('[resmio-openinghours]');}},
                 {text: 'Beschreibung', onclick: function() {editor.insertContent('[resmio-description]');}}
             ]
         });

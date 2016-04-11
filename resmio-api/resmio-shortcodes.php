@@ -34,7 +34,7 @@ function get_rest_data( $atts, $content = null, $tag ) {
             $street = $src["api_address_street"];
             $zipcode = $src["api_address_zip"];
             $city = $src["api_address_city"];
-            return "<i class='fa fa-home'></i>&nbsp;&nbsp;".$street."<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$zipcode." ".$city;
+            return $street."<br>".$zipcode." ".$city;
             break;
         
         case "resmio-phone":
@@ -53,7 +53,13 @@ function get_rest_data( $atts, $content = null, $tag ) {
             $src = get_option('resmio_admin_menu_api_options');
             $phone = $src["api_contact_phone"];
             $email = $src["api_contact_email"];
-            return "<i class='fa fa-phone'>&nbsp;&nbsp;&nbsp;</i>".$phone."<br><i class='fa fa-envelope'>&nbsp;&nbsp;</i>".$email;
+            if (!empty($phone)) {
+                $phone_1 = "<i class='fa fa-phone'>&nbsp;&nbsp;&nbsp;</i>".$phone."<br>";
+            }
+            if (!empty($email)) {
+                $email_1 = "<i class='fa fa-envelope'>&nbsp;&nbsp;</i>".$email;
+            }
+            return $phone_1.$email_1;
             break;
        
         case "resmio-facebook":
@@ -62,20 +68,26 @@ function get_rest_data( $atts, $content = null, $tag ) {
             return $facebook;
             break;
        
-        case "resmio-google":
+        case "resmio-googleplus":
             $src = get_option('resmio_admin_menu_api_options');
             $google = $src["api_social_google"];
             return $google;
             break;
 
-        case "resmio-social-media":
+        case "resmio-social":
             $src = get_option('resmio_admin_menu_api_options');
             $facebook = $src["api_social_facebook"];
             $google = $src["api_social_google"];
-            return "<i class='fa fa-facebook'>&nbsp;&nbsp;&nbsp;&nbsp;</i>".$facebook."<br><i class='fa fa-google-plus'>&nbsp;</i>".$google;
+            if (!empty($facebook)){
+                $facebook_1 = "<i class='fa fa-facebook-square'></i>&nbsp;&nbsp;</i>".$facebook."<br>";
+            }
+            if (!empty($google)){
+                $google_1 = "<i class='fa fa-google-plus-square'></i>&nbsp;&nbsp;</i>".$google;
+            }
+            return $facebook_1.$google_1;
             break;
        
-        case "resmio-opening-times":
+        case "resmio-openinghours":
             $src = get_option('resmio_admin_menu_api_options');
             $openingDays1 = $src["api_openh_r1_left"];
             $openingHours1 = $src["api_openh_r1_right"];
@@ -181,9 +193,9 @@ function register_shortcodes(){
     add_shortcode('resmio-email', 'get_rest_data');
     add_shortcode('resmio-contact', 'get_rest_data');
     add_shortcode('resmio-facebook', 'get_rest_data');
-    add_shortcode('resmio-google', 'get_rest_data');
-    add_shortcode('resmio-social-media', 'get_rest_data');
-    add_shortcode('resmio-opening-times', 'get_rest_data');
+    add_shortcode('resmio-googleplus', 'get_rest_data');
+    add_shortcode('resmio-social', 'get_rest_data');
+    add_shortcode('resmio-openinghours', 'get_rest_data');
     add_shortcode('resmio-description', 'get_rest_data');
     add_shortcode('resmio-button', 'get_rest_data');
     add_shortcode('resmio-widget', 'get_rest_data');

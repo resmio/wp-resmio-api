@@ -1,0 +1,93 @@
+
+.wp-admin .resmio-admin-menu table.form-table > tbody > tr > th {
+	display: none;
+}
+
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options h1 {
+	font-size: 34px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options table.resmio-api-data-table h4 {
+	padding: 5px 5px 5px 5px;
+	margin: 0;
+	font-size: 14px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .button-primary {
+	background-color: #555555;
+	text-shadow: none;
+	color: #ffffff;
+	border-color: #555555;
+	box-shadow: none;
+	margin-top: 19px;
+	margin-right: 15px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-button-update {
+	background-color: #4CAF50;
+	color: #ffffff;
+	border-color: #4CAF50;
+	margin-top: 19px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-button-update-end {
+	background-color: #4CAF50;
+	color: #ffffff;
+	border-color: #4CAF50;
+	margin-top: 20px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options a {
+    display: inline-block;
+}
+i.resmio-editor-icon { 
+	background-image: url('../img/resmio-icon.png');
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper { 
+  	overflow:hidden;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .one {
+  	float:left; 
+  	width:500px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .one-id {
+  	background-color: #BDBDBD;
+  	padding: 20px;
+  	width: 430px;
+  	border-radius: 5px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .two { 
+  	overflow:hidden;
+}
+
+@media screen and (max-width: 1200px) {
+   .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .one { 
+    float: none;
+    margin-right:0;
+    width:auto;
+    height:auto;
+    border:0; 
+  }
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-values {
+	float:left;
+	min-width: 160px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-values-2 {
+	float:left;
+	width: 70px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-values-id {
+	margin-top:15px;
+	margin-right:20px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .input-field-values {
+	margin-top:15px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .input-field-values-2 {
+	margin-top:15px;
+	float:left;
+	margin-right:50px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode {
+	float:left;
+	width:160px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-value {
+	margin-top:17px;
+}
