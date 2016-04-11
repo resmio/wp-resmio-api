@@ -1,11 +1,21 @@
 <?php
 
+require("resmio-shortcodes.php");
+
 /**
 * Load custom backend css file
 */
 add_action( 'admin_enqueue_scripts', 'load_admin_styles' );
 function load_admin_styles() {
 	wp_enqueue_style('resmiocss', get_stylesheet_directory_uri().'/resmio-api/css/style.css');
+}
+
+/**
+* Load Font Awesome
+*/
+add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+function enqueue_font_awesome() {
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
 }
 
 /**
@@ -129,6 +139,7 @@ function resmio_api_data_update() {
 			set_transient( 'resmio_api_data_save', $api_data );
 			
 			$get_api_data = get_transient( 'resmio_api_data_save' );
+
 			$facilityName = $get_api_data["name"]; if ($facilityName == "") {$facilityNameStr = "";} else {$facilityNameStr = $facilityName;}
 			$facilityStreet = $get_api_data["street"]; if ($facilityStreet == "") {$facilityStreetStr = "";} else {$facilityStreetStr = $facilityStreet;}
 			$facilityZip = $get_api_data["zip_code"]; if ($facilityZip == "") {$facilityZipStr = "";} else {$facilityZipStr = $facilityZip;}
@@ -174,7 +185,7 @@ function resmio_api_data_update() {
 			else {
 				$facilityOpeningStr = $facilityOpening;
 			}
-			//
+			
 			$options['api_restaurant_name'] = $facilityNameStr;
 			$options['api_address_street'] = $facilityStreetStr;
 			$options['api_address_zip'] = $facilityZipStr;
