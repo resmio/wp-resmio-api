@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: resmio api\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Mon Apr 18 2016 13:33:04 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Mon Apr 18 2016 13:49:40 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Mon Apr 18 2016 13:36:08 GMT+0200 (CEST)\n"
 "Last-Translator: admin <admin@localhost.dev>\n"
 "Language-Team: \n"
 "Language: English\n"
@@ -24,67 +24,67 @@ msgstr ""
 
 #: index.php:19 /resmio-api/resmio-api.php:336
 msgid "Name"
-msgstr "Name"
+msgstr ""
 
 #: index.php:20 /resmio-api/resmio-api.php:351
 msgid "Adresse"
-msgstr "Address"
+msgstr ""
 
 #: index.php:21 /resmio-api/resmio-api.php:363
 msgid "Straße"
-msgstr "Street"
+msgstr ""
 
 #: index.php:22 /resmio-api/resmio-api.php:375
 msgid "Postleitzahl"
-msgstr "ZIP-Code"
+msgstr ""
 
 #: index.php:23 /resmio-api/resmio-api.php:387
 msgid "Ort"
-msgstr "City"
+msgstr ""
 
 #: index.php:24 /resmio-api/resmio-api.php:402
 msgid "Kontakt"
-msgstr "Contact"
+msgstr ""
 
 #: index.php:25 /resmio-api/resmio-api.php:412
 msgid "Telefon"
-msgstr "Phone"
+msgstr ""
 
 #: index.php:26 /resmio-api/resmio-api.php:424
 msgid "E-Mail"
-msgstr "Email"
+msgstr ""
 
 #: index.php:27 /resmio-api/resmio-api.php:439
 msgid "soziale Plattformen"
-msgstr "Social Platforms"
+msgstr ""
 
 #: index.php:28 /resmio-api/resmio-api.php:449
 msgid "Facebook (URL)"
-msgstr "Facebook (URL)"
+msgstr ""
 
 #: index.php:29 /resmio-api/resmio-api.php:461
 msgid "Google + (URL)"
-msgstr "Google + (URL)"
+msgstr ""
 
 #: index.php:30 /resmio-api/resmio-api.php:476
 msgid "Öffnungszeiten"
-msgstr "Opening Hours"
+msgstr ""
 
 #: index.php:31 /resmio-api/resmio-api.php:587
 msgid "Beschreibung"
-msgstr "Description"
+msgstr ""
 
 #: index.php:36
 msgid "Button"
-msgstr "Button"
+msgstr ""
 
 #: index.php:39
 msgid "Widget"
-msgstr "Widget"
+msgstr ""
 
 #: resmio-api/resmio-api.php:112
 msgid "Einstellungen für resmio API"
-msgstr "Settings for resmio API"
+msgstr ""
 
 #: resmio-api/resmio-api.php:113
 msgid ""
@@ -95,99 +95,89 @@ msgid ""
 "API Daten übernehmen</b><br>Hinweis: vor der Übernahme (Schritt 2) können "
 "die importierten Daten manuell geändert werden"
 msgstr ""
-"In the first step the resmio ID is stored and the data are imported from the "
-"resmio API &rArr; 1) Import API Data<br>In the second step the imported data "
-"are stored in the WordPress settings &rArr; 2) Store API Data</b><br>Note: "
-"before storing the data (step 2) the imported data can be changed by hand"
 
 #: resmio-api/resmio-api.php:114
 msgid ""
 "<br>Mit den in eckigen Klammern [ ] definierten Begriffe lassen sich "
 "Shortcodes innerhalb des Editors im Contentbereich verwenden.<br> "
 msgstr ""
-" <br>Terms defined in square brackets enable the using of shortcodes within "
-"the editor in the content area.<br>"
 
 #: resmio-api/resmio-api.php:124
 msgid "resmio API Daten erfolgreich importiert"
-msgstr "resmio API data imported successfully"
+msgstr ""
 
 #: resmio-api/resmio-api.php:127
 msgid "Daten der Webseite erfolgreich aktualisiert"
-msgstr "Website values updated successfully"
+msgstr ""
 
 #: resmio-api/resmio-api.php:141 /resmio-api/resmio-api.php:250
 msgid "resmio ID nicht gespeichert"
-msgstr "resmio ID not stored"
+msgstr ""
 
 #: resmio-api/resmio-api.php:286
 msgid "Ungültige ID"
-msgstr "Invalid ID"
+msgstr ""
 
 #: resmio-api/resmio-api.php:287
 msgid ""
 "Noch keine resmio ID? Melden Sie sich <a href=\"https://www.resmio.com\" "
 "target=\"_blank\">hier</a> kostenlos an!"
 msgstr ""
-"Still no resmio ID? Sign up <a href=\"https://www.resmio.com\" "
-"target=\"_blank\">here</a> for free!"
 
 #: resmio-api/resmio-api.php:304
 msgid "Gib die ID des Restaurants ein:"
-msgstr "Enter your resmio ID:"
+msgstr ""
 
 #: resmio-api/resmio-api.php:306
 msgid "resmio ID Beispiel: the-fish"
-msgstr "resmio ID example: the-fish"
+msgstr ""
 
 #: resmio-api/resmio-api.php:307
 msgid "1) API Daten importieren	&nbsp;"
-msgstr "1) Import API data"
+msgstr ""
 
 #: resmio-api/resmio-api.php:309 /resmio-api/resmio-api.php:609
 msgid ""
 "Bist du dir sicher, dass du die Daten der resmio API übernehmen willst? Die "
 "aktuellen Werte werden damit überschrieben!"
 msgstr ""
-"Are you sure you want to save the resmio API data? The current database "
-"values will be replaced!"
 
 #: resmio-api/resmio-api.php:310 /resmio-api/resmio-api.php:610
 msgid "2) API Daten übernehmen"
-msgstr "2) Store API data"
+msgstr ""
 
 #: resmio-api/resmio-api.php:330
 msgid "Restaurantname"
-msgstr "Restaurant Name"
+msgstr ""
 
 #: resmio-api/resmio-api.php:486 /resmio-api/resmio-api.php:500 /resmio-
 #: api/resmio-api.php:514 /resmio-api/resmio-api.php:528 /resmio-api/resmio-api.
 #: php:542 /resmio-api/resmio-api.php:556 /resmio-api/resmio-api.php:570
 msgid "Tag(e)"
-msgstr "Day(s)"
+msgstr ""
 
 #: resmio-api/resmio-api.php:490 /resmio-api/resmio-api.php:504 /resmio-
 #: api/resmio-api.php:518 /resmio-api/resmio-api.php:532 /resmio-api/resmio-api.
 #: php:546 /resmio-api/resmio-api.php:560 /resmio-api/resmio-api.php:574
 msgid "Zeiten"
-msgstr "Hours"
+msgstr ""
 
 #: resmio-api/resmio-api.php:593
 msgid "Text"
-msgstr "Text"
+msgstr ""
 
 #. Name of the theme
 msgid "resmio api"
-msgstr "resmio api"
+msgstr ""
 
 #. Theme URI of the theme
 msgid "https://www.resmio.com/"
-msgstr "https://www.resmio.com/"
+msgstr ""
 
 #. Description of the theme
 msgid "This is the resmio-api theme made by resmio GmbH"
-msgstr "This is the resmio-api theme made by resmio GmbH"
+msgstr ""
 
 #. Author of the theme
 msgid "resmio GmbH (Renaldo Weiser)"
-msgstr "resmio GmbH (Renaldo Weiser)"
+msgstr ""
