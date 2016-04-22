@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: resmio api\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Fri Apr 22 2016 13:14:49 GMT+0200 (CEST)\n"
-"PO-Revision-Date: Fri Apr 22 2016 13:48:26 GMT+0200 (CEST)\n"
+"PO-Revision-Date: Fri Apr 22 2016 13:46:57 GMT+0200 (CEST)\n"
 "Last-Translator: admin <admin@localhost.dev>\n"
 "Language-Team: \n"
 "Language: English\n"
@@ -56,7 +56,7 @@ msgstr "Email"
 
 #: ../index.php:28 ../resmio-api/resmio-api.php:441
 msgid "soziale Plattformen"
-msgstr "Social network(s)"
+msgstr "Social Network(s)"
 
 #: ../index.php:29 ../resmio-api/resmio-api.php:451
 msgid "Facebook"
