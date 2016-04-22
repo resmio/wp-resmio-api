@@ -26,7 +26,7 @@ transitional.dtd">
 		<p><b><?php _e('E-Mail', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-email]'); ?></p>
 		<p><b><?php _e('soziale Plattformen', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-social]'); ?></p>
 		<p><b><?php _e('Facebook (URL)', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-facebook]'); ?></p>
-		<p><b><?php _e('Google + (URL)', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-googleplus]'); ?></p>
+		<p><b><?php _e('Google+ (URL)', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-googleplus]'); ?></p>
 		<p><b><?php _e('Öffnungszeiten', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-openinghours]'); ?></p>
 		<p><b><?php _e('Beschreibung', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-description]'); ?></p>
 	
