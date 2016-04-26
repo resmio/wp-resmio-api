@@ -1,3 +1,5 @@
+
+
 <?php
 
 require("resmio-shortcodes.php");
@@ -404,7 +406,7 @@ function resmio_api_data_update() {
     	<div class="two">
     		<h4 class="label-for-shortcode">[resmio-contact]</h4>
     		<p class="label-for-shortcode-value"><?php echo do_shortcode('[resmio-contact]'); ?></p>
-    	</div>
+		</div>
 	</div>
     <div class="wrapper">
     	<div class="one">
@@ -446,7 +448,7 @@ function resmio_api_data_update() {
     <div class="wrapper">
     	<div class="one">
     		<label class="label-for-values" for="api_social_facebook">
-			<h4><?php _e('Facebook (URL)', 'resmio_i18n'); ?></h4>
+			<h4><?php _e('Facebook', 'resmio_i18n'); ?></h4>
 			</label>
 			<input class="input-field-values" id="api_social_facebook" type="text" size="36" name="resmio_admin_menu_api_options[api_social_facebook]" value="<?php echo $apiSocFb; ?>" />
 		</div>
@@ -458,7 +460,7 @@ function resmio_api_data_update() {
 	<div class="wrapper">
     	<div class="one">
     		<label class="label-for-values" for="api_social_google">
-				<h4><?php _e('Google + (URL)', 'resmio_i18n'); ?></h4>
+				<h4><?php _e('Google+', 'resmio_i18n'); ?></h4>
 			</label>
 			<input class="input-field-values" id="api_social_google" type="text" size="36" name="resmio_admin_menu_api_options[api_social_google]" value="<?php echo $apiSocGplus; ?>" />
 		</div>
@@ -611,7 +613,7 @@ function resmio_api_data_update() {
 			<input type="hidden" name="action" value="update" />
 		</div>
 	</div>
-<?php
+	<?php 
 }
 
 /**
