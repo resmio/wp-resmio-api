@@ -37,6 +37,7 @@ transitional.dtd">
 		<br>
 		<br>
 		<p><b><?php _e('Widget', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-widget]'); ?></p>
+
 	</div><!-- sidebar -->
 
 	<div id="footer"></div><!-- footer -->
