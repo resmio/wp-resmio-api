@@ -2,8 +2,8 @@
 transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 <head profile="http://gmpg.org/xfn/11">
- 
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/resmio-api/css/resmio-style.css">
+
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/resmio-api/css/resmio-style.css">
 <?php wp_head(); ?>
 
 </head>
@@ -12,7 +12,7 @@ transitional.dtd">
 <div id="wrapper">
 
 	<div id="header">
-	<img src="<?php bloginfo('stylesheet_directory'); ?>/resmio-api/img/resmio-logo.png"/>
+	<img src="<?php echo get_stylesheet_directory_uri(); ?>/resmio-api/img/resmio-logo.png"/>
 	</div><!-- header -->
 
 	<div id="main">
@@ -29,7 +29,7 @@ transitional.dtd">
 		<p><b><?php _e('Google+ (URL)', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-googleplus]'); ?></p>
 		<p><b><?php _e('Öffnungszeiten', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-openinghours]'); ?></p>
 		<p><b><?php _e('Beschreibung', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-description]'); ?></p>
-	
+
 	</div><!-- main -->
 
 	<div id="sidebar">
@@ -37,7 +37,7 @@ transitional.dtd">
 		<br>
 		<br>
 		<p><b><?php _e('Widget', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-widget]'); ?></p>
-	</div><!-- sidebar -->	
+	</div><!-- sidebar -->
 
 	<div id="footer"></div><!-- footer -->
 
