@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="21px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <title>symbol-email</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="27" height="17" rx="1"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="27" height="17" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M0.857666016,1.27911377 L12.6104024,8.28647994 C13.0894738,8.572118 13.8628891,8.57847828 14.3419846,8.29828185 L26.34375,1.27911377" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="25.486084" height="7.22550971" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="symbol-email" stroke="#555555" stroke-width="2.6">
+            <g id="Group" transform="translate(7.000000, 11.000000)">
+                <use id="Path-159" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                <use id="Path-159" mask="url(#mask-4)" xlink:href="#path-3"></use>
+            </g>
+        </g>
+        <g id="resmio-icons" transform="translate(-445.000000, -877.000000)"></g>
+    </g>
+</svg>
