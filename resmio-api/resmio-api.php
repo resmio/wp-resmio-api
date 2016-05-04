@@ -94,8 +94,8 @@ function api_sec_update_callback() {
 	?>
 	<a href="https://www.resmio.de"><img src="<?php echo get_stylesheet_directory_uri(); ?>/resmio-api/img/resmio-logo.png" style="width: 180px;"/></a>
 	<h3><?php _e('Einstellungen für resmio API', 'resmio_i18n'); ?></h3>
-	<p><b><?php _e('Mit dieser API können Sie relevante Informationen über Ihr Restaurant in Ihrer WordPress Webseite hinzufügen. Wenn Sie das Widget oder den Button verwenden, können Ihre Gäste online Buchungen vornehmen.', 'resmio_i18n'); ?></p>
-	<p><b><?php _e('Mit den in eckigen Klammern [ ] definierten Begriffe lassen sich Shortcodes innerhalb des Editors im Contentbereich verwenden.<br> ', 'resmio_i18n'); ?></p>
+	<p><?php _e('Mit dieser API können Sie relevante Informationen über Ihr Restaurant in Ihrer WordPress Webseite hinzufügen. Wenn Sie das Widget oder den Button verwenden, können Ihre Gäste online Buchungen vornehmen.', 'resmio_i18n'); ?></p>
+	<p><?php _e('Mit den in eckigen Klammern [ ] definierten Begriffe lassen sich Shortcodes innerhalb des Editors im Contentbereich verwenden.<br> ', 'resmio_i18n'); ?></p>
 	<br>
 	<?php
 }
@@ -300,7 +300,7 @@ function resmio_api_data_update() {
 			}
 		}
 	</script>
-	<p><?php _e('Schritt 1 - Gib die ID des Restaurants ein und importiere deine Restaurantinformationen.', 'resmio_i18n'); ?></p>
+	<p><?php _e('Schritt 1 - Gib die ID des Restaurants ein und importiere deine Restaurantinformationen', 'resmio_i18n'); ?>&nbsp;<?php _e('(Noch keine resmio ID? Melden Sie sich <a href="https://www.resmio.com" target="_blank">hier</a> kostenlos an).', 'resmio_i18n'); ?></p>
 	<br>
 	<p class="float-left-id"><?php _e('resmio ID', 'resmio_i18n'); ?></p>
 	<input class="input-field-id" size="20" id="resmio-facility-id" name="resmio-facility-id" type="text" placeholder="the-fish" value="<?php echo get_option('resmio-facility-id'); ?>" />
@@ -323,11 +323,11 @@ function resmio_api_data_update() {
 		</div>
     	<div class="two">
     		<p><b><?php _e('Ergebnis', 'resmio_i18n'); ?></b></p>
-    		<p><?php _e('', 'resmio_i18n'); ?></p>
+    		<p><?php _e('(so wird die Information auf der Webseite dargestellt)', 'resmio_i18n'); ?></p>
     	</div>
     	<div class="three">
     		<p><b><?php _e('Shortcode', 'resmio_i18n'); ?></b></p>
-    		<p><?php _e('', 'resmio_i18n'); ?></p>
+    		<p><?php _e('(so wird der Code kopiert)', 'resmio_i18n'); ?></p>
     	</div>
 	</div>
 	<div class="wrapper-head-2">
@@ -506,7 +506,7 @@ function resmio_api_data_update() {
 	<br>
 	<div class="wrapper">
     	<div class="one">
-    		<p><?php _e('Öffnungszeiten', 'resmio_i18n'); ?></p>
+    		<p><b><?php _e('Öffnungszeiten', 'resmio_i18n'); ?></b></p>
 		</div>
 		<div class="two">
     		&nbsp;
@@ -566,26 +566,6 @@ function resmio_api_data_update() {
 					<p><?php _e('Zeiten', 'resmio_i18n'); ?></p>
 				</label>
 				<input class="input-field-values-2" id="api_openh_r5_right" type="text" size="17" name="resmio_admin_menu_api_options[api_openh_r5_right]" value="<?php echo $apiOpenR5R; ?>" />
-				<br>
-				<br>
-				<label class="label-for-values-2" for="api_openh_r6_left">
-					<p><?php _e('Tag(e)', 'resmio_i18n'); ?></p>
-				</label>
-				<input class="input-field-values-2" id="api_openh_r6_left" type="text" size="10" name="resmio_admin_menu_api_options[api_openh_r6_left]" value="<?php echo $apiOpenR6L; ?>" />
-				<label class="label-for-values-3" for="api_openh_r6_right" >
-					<p><?php _e('Zeiten', 'resmio_i18n'); ?></p>
-				</label>
-				<input class="input-field-values-2" id="api_openh_r6_right" type="text" size="17" name="resmio_admin_menu_api_options[api_openh_r6_right]" value="<?php echo $apiOpenR6R; ?>" />
-				<br>
-				<br>
-				<label class="label-for-values-2" for="api_openh_r7_left">
-					<p><?php _e('Tag(e)', 'resmio_i18n'); ?></p>
-				</label>
-				<input class="input-field-values-2" id="api_openh_r7_left" type="text" size="10" name="resmio_admin_menu_api_options[api_openh_r7_left]" value="<?php echo $apiOpenR7L; ?>" />
-				<label class="label-for-values-3" for="api_openh_r7_right" >
-					<p><?php _e('Zeiten', 'resmio_i18n'); ?></p>
-				</label>
-				<input class="input-field-values-2" id="api_openh_r7_right" type="text" size="17" name="resmio_admin_menu_api_options[api_openh_r7_right]" value="<?php echo $apiOpenR7R; ?>" />
 			</div>
 		</div>
     	<div class="two">
@@ -602,7 +582,7 @@ function resmio_api_data_update() {
 	<br>
 	<div class="wrapper">
     	<div class="one">
-    		<p><?php _e('Widget & Button', 'resmio_i18n'); ?></p>
+    		<p><b><?php _e('Widget & Button', 'resmio_i18n'); ?></b></p>
 		</div>
 		<div class="two">
     	</div>
@@ -611,14 +591,12 @@ function resmio_api_data_update() {
 	</div>
 	<div class="wrapper-2">
     	<div class="one">
+    		<p class="label-for-shortcode-widget"><?php echo do_shortcode('[resmio-widget]'); ?>&nbsp;</p>
     		<p class="label-for-shortcode-w">[resmio-widget]</p>
-			<p class="label-for-shortcode-widget"><?php echo do_shortcode('[resmio-widget]'); ?>&nbsp;</p>
     	</div>
     	<div class="two-half">
-    		<p class="label-for-shortcode-b">[resmio-button]</p>
-    	</div>
-    	<div class="three-half-half">
-    		<p class="label-for-shortcode-value"><?php echo do_shortcode('[resmio-button]'); ?>&nbsp;</p>
+    		<p class="label-for-shortcode-b"><?php echo do_shortcode('[resmio-button]'); ?>&nbsp;</p>
+    		<p class="label-for-shortcode-button">[resmio-button]</p>		
     	</div>
     </div>
     <br>

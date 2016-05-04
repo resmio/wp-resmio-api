@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: resmio api\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-02 12:59+0200\n"
-"PO-Revision-Date: 2016-05-02 13:00+0200\n"
+"POT-Creation-Date: 2016-05-04 16:27+0200\n"
+"PO-Revision-Date: 2016-05-04 16:31+0200\n"
 "Last-Translator: admin <admin@localhost.dev>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -131,8 +131,16 @@ msgstr ""
 #: ../resmio-api/resmio-api.php:303
 msgid ""
 "Schritt 1 - Gib die ID des Restaurants ein und importiere deine "
-"Restaurantinformationen."
-msgstr "Step 1 - Enter your resmio ID and Import your data/info."
+"Restaurantinformationen"
+msgstr "Step 1 - Enter your resmio ID and Import your data/info"
+
+#: ../resmio-api/resmio-api.php:303
+msgid ""
+"(Noch keine resmio ID? Melden Sie sich <a href=\"https://www.resmio.com\" "
+"target=\"_blank\">hier</a> kostenlos an)."
+msgstr ""
+"(Still no resmio ID? Sign up <a href=\"https://www.resmio.com\" target="
+"\"_blank\">here</a> for free !)."
 
 #: ../resmio-api/resmio-api.php:305
 msgid "resmio ID"
@@ -142,7 +150,7 @@ msgstr "resmio ID"
 msgid "Daten importieren"
 msgstr "Import data"
 
-#: ../resmio-api/resmio-api.php:312 ../resmio-api/resmio-api.php:626
+#: ../resmio-api/resmio-api.php:312 ../resmio-api/resmio-api.php:604
 msgid ""
 "Bist du dir sicher, dass du die Daten der resmio API übernehmen willst? Die "
 "aktuellen Werte werden damit überschrieben!"
@@ -158,7 +166,7 @@ msgstr ""
 "Step 2 - Add or edit the fields about your restaurant to update them into "
 "your WordPress Website."
 
-#: ../resmio-api/resmio-api.php:314 ../resmio-api/resmio-api.php:627
+#: ../resmio-api/resmio-api.php:314 ../resmio-api/resmio-api.php:605
 msgid "Daten speichern"
 msgstr "Save data"
 
@@ -174,9 +182,17 @@ msgstr "(Edit your restaurants info here)"
 msgid "Ergebnis"
 msgstr "Result"
 
+#: ../resmio-api/resmio-api.php:326
+msgid "(so wird die Information auf der Webseite dargestellt)"
+msgstr "(How each info will look in your Website)"
+
 #: ../resmio-api/resmio-api.php:329
 msgid "Shortcode"
 msgstr "Shortcode"
+
+#: ../resmio-api/resmio-api.php:330
+msgid "(so wird der Code kopiert)"
+msgstr "(To copy in your WordPress template)"
 
 #: ../resmio-api/resmio-api.php:335
 msgid "Felder und Shortcodes"
@@ -220,21 +236,24 @@ msgstr "Description"
 
 #: ../resmio-api/resmio-api.php:521 ../resmio-api/resmio-api.php:531
 #: ../resmio-api/resmio-api.php:541 ../resmio-api/resmio-api.php:552
-#: ../resmio-api/resmio-api.php:562 ../resmio-api/resmio-api.php:572
-#: ../resmio-api/resmio-api.php:582
+#: ../resmio-api/resmio-api.php:562
 msgid "Tag(e)"
 msgstr "Day(s)"
 
 #: ../resmio-api/resmio-api.php:525 ../resmio-api/resmio-api.php:535
 #: ../resmio-api/resmio-api.php:545 ../resmio-api/resmio-api.php:556
-#: ../resmio-api/resmio-api.php:566 ../resmio-api/resmio-api.php:576
-#: ../resmio-api/resmio-api.php:586
+#: ../resmio-api/resmio-api.php:566
 msgid "Zeiten"
 msgstr "Hours"
 
-#: ../resmio-api/resmio-api.php:605
+#: ../resmio-api/resmio-api.php:585
 msgid "Widget & Button"
 msgstr "Widget & Button"
+
+#~ msgid ""
+#~ "Schritt 1 - Gib die ID des Restaurants ein und importiere deine "
+#~ "Restaurantinformationen."
+#~ msgstr "Step 1 - Enter your resmio ID and Import your data/info."
 
 #~ msgid ""
 #~ "Im ersten Schritt wird die resmio ID gespeichert und die Daten werden von "
