@@ -27,11 +27,6 @@ i.resmio-editor-icon {
   	padding-bottom: 7px;
 	padding-top: 7px;
 }
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-2 { 
-  	overflow:hidden;
-  	padding-bottom: 7px;
-	padding-top: 7px;
-}
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-1 { 
   	overflow:hidden;
   	background: #d2d2d2;
@@ -57,11 +52,6 @@ i.resmio-editor-icon {
 		margin-right: 10px;
 		margin-top: 9px;
 		float: left;
-	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w {
-	color: #00a7c4;
-	float: left;
-	margin-bottom: 20px;
 	}
 }
 @media only screen and (min-width: 401px) and (max-width: 500px) {
@@ -174,8 +164,8 @@ i.resmio-editor-icon {
 		border-radius:5px;
 	}
 }
-@media only screen and (max-width: 1260px) {
-	/* width <= 1260px */
+@media only screen and (max-width: 1295px) {
+	/* width <= 1295px */
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .two { 
   		display: none;
 	}
@@ -191,12 +181,12 @@ i.resmio-editor-icon {
   	display: none;
 	}
 }
-@media only screen and (min-width: 1261px) {
-	/* width >= 1261px */
+@media only screen and (min-width: 1296px) {
+	/* width >= 1296px */
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .two { 
   		overflow:hidden;
   		float:left;
-  		width:360px;
+  		width:320px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-2 { 
   	display: none;
@@ -212,42 +202,65 @@ i.resmio-editor-icon {
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .float-left { 
   	float:left; 
 	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-3 { 
-  	display: none;
+}
+@media only screen and (min-width: 1050px) {
+	/* width >= 1050px */
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .widget-button-small { 
+  		display: none;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w {
+	color: #00a7c4;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-widget {
+		float: left;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-b {
+	  	float: left;
+	  	color: #00a7c4;
+	  	margin-top: 20px;
+	  	margin-left: 20px;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-button {
+		float: left;
+		margin-top: 10px;
+		margin-left: 150px;
 	}
 }
+@media only screen and (max-width: 1049px) {
+	/* width <= 1049px */
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w {
+		display: none;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-button {
+		display: none;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-b {
+		display: none;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w-2 {
+		color: #00a7c4;
+		margin-left: 170px;
+		margin-bottom: 30px;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-b-2 {
+	  	color: #00a7c4;
+	  	float: left;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-button-2 {
+		float: left;
+		width: 170px;
+	}
+}
+
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .three-half { 
   	overflow:hidden;
   	float:left;
 }
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .three-half-half { 
-  	overflow:hidden;
-  	float:left;
-}
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .two-half { 
-	float:left; 
-  	width:490px;
-}
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-value {
   	width:250px;
-}
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w {
-	color: #00a7c4;
-	width: 120px;
-	margin-bottom: 20px;
-}
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-widget {
-	width: 275px;
-	float: left;
-}
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-button {
-  	width:120px;
-  	color: #00a7c4;
-	margin-bottom: 20px;
-}
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-b {
-	width: 200px;
-	float: left;
 }
 
 img.phone{

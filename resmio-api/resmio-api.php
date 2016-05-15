@@ -584,19 +584,20 @@ function resmio_api_data_update() {
     	<div class="one">
     		<p><b><?php _e('Widget & Button', 'resmio_i18n'); ?></b></p>
 		</div>
-		<div class="two">
-    	</div>
-    	<div class="three">
-    	</div>
 	</div>
-	<div class="wrapper-2">
-    	<div class="one">
-    		<p class="label-for-shortcode-widget"><?php echo do_shortcode('[resmio-widget]'); ?>&nbsp;</p>
-    		<p class="label-for-shortcode-w">[resmio-widget]</p>
+	<div class="wrapper">
+    	<div class="widget-button-big">
+    		<div class="label-for-shortcode-widget"><?php echo do_shortcode('[resmio-widget]'); ?>&nbsp;</div>
+    		<div class="label-for-shortcode-w">[resmio-widget]</div>
+    		<div class="label-for-shortcode-button"><?php echo do_shortcode('[resmio-button]'); ?>&nbsp;</div>
+    		<div class="label-for-shortcode-b">[resmio-button]</div>
     	</div>
-    	<div class="two-half">
-    		<p class="label-for-shortcode-b"><?php echo do_shortcode('[resmio-button]'); ?>&nbsp;</p>
-    		<p class="label-for-shortcode-button">[resmio-button]</p>		
+    </div>
+    <div class="wrapper">
+    	<div class="widget-button-small">
+   			<div class="label-for-shortcode-w-2">[resmio-widget]</div>
+    		<div class="label-for-shortcode-button-2"><?php echo do_shortcode('[resmio-button]'); ?>&nbsp;</div>
+    		<div class="label-for-shortcode-b-2">[resmio-button]</div>
     	</div>
     </div>
     <br>
