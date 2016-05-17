@@ -268,24 +268,29 @@ img.phone{
 	float: left;
 	height: 0px;
 	width: 0px;
-    padding:0px 22px 18px 0px;
+	margin-top: 4px;
+	margin-left: 2px;
+    padding:3px 13px 12px 4px;
 	background-image: url("../img/phone.svg");
-}img.email{
+}
+img.email{
   	display: inherit;
   	float: left;
   	height: 0px;
 	width: 0px;
-    padding:0px 22px 18px 0px;
+	margin-top: 4px;
+    padding:0px 20px 15px 0px;
   	background-image: url("../img/email.svg");
-}img.facebook{
+}
+img.facebook{
 	background-repeat: no-repeat;
   	display:inherit;
   	float: left;
   	height: 0px;
 	width: 0px;
-    padding:0px 22px 18px 0px;
+	margin-top: 4px;
+    padding:0px 20px 15px 0px;
   	background-image: url("../img/facebook.svg");
-
 }
 img.google-plus{
 	background-repeat: no-repeat;
@@ -293,15 +298,16 @@ img.google-plus{
   	float: left;
   	height: 0px;
 	width: 0px;
-    padding:0px 22px 18px 0px;
+	margin-top: 4px;
+    padding:0px 20px 15px 0px;
   	background-image: url("../img/google-plus.svg");
 }
-#example-page {
+#example-page-resmio {
 	color: #333; background: #e5e5e5;
 }
  
-#wrapper {
-	font-family: 'Calibri', 'sans-serif';
+#wrapper-resmio {
+	/*font-family: 'Calibri', 'sans-serif';*/
 	width: 850px; 
 	margin: auto; 
 	text-align: left; 
@@ -309,37 +315,37 @@ img.google-plus{
 	padding: 20px 20px 20px 20px;
 }
 
-#header {
+#header-resmio {
 	height: 150px; 
 	padding: 0px;
 }
 
-#main {
+#main-resmio {
 	width: 350px; 
 	padding: 20px; 
 	float: left;
 }
 
 @media screen and (max-width: 800px) {
-	#main { 
+	#main-resmio { 
     float: none;
     width:auto;
     height:auto;
   }
 }
 
-#sidebar {
+#sidebar-resmio {
 	width: 300px; 
 	padding: 20px; 
 	float: left;
 	overflow:hidden;
 }
 
-#footer {
+#footer-resmio {
 	clear: both; 
 }
 
-p.thick {
+p.thick-resmio {
     font-weight: bold;
 }
 

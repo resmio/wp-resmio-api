@@ -7,15 +7,15 @@ transitional.dtd">
 <?php wp_head(); ?>
 
 </head>
-<body id="example-page">
+<body id="example-page-resmio">
 
-<div id="wrapper">
+<div id="wrapper-resmio">
 
-	<div id="header">
+	<div id="header-resmio">
 	<img src="<?php echo get_stylesheet_directory_uri(); ?>/resmio-api/img/resmio-logo.png"/> 
  	</div><!-- header -->
 
-	<div id="main">
+	<div id="main-resmio">
 		<p><b><?php _e('Name', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-name]'); ?></p>
 		<p><b><?php _e('Adresse', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-address]'); ?></p>
 		<p><b><?php _e('Straße', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-street]'); ?></p>
@@ -32,14 +32,14 @@ transitional.dtd">
 	
 	</div><!-- main -->
 
-	<div id="sidebar">
+	<div id="sidebar-resmio">
 		<p><b><?php _e('Button', 'resmio_i18n'); ?>:</b><br><br><?php echo do_shortcode('[resmio-button]'); ?></p>
 		<br>
 		<br>
 		<p><b><?php _e('Widget', 'resmio_i18n'); ?>:</b><br><?php echo do_shortcode('[resmio-widget]'); ?></p>
 	</div><!-- sidebar -->	
 
-	<div id="footer"></div><!-- footer -->
+	<div id="footer-resmio"></div><!-- footer -->
 
 </div><!-- wrapper -->
 
