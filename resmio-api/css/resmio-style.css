@@ -19,21 +19,21 @@
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options a {
     display: inline-block;
 }
-i.resmio-editor-icon { 
+i.resmio-editor-icon {
 	background-image: url('../img/resmio-icon.png');
 }
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper { 
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper {
   	overflow:hidden;
   	padding-bottom: 7px;
 	padding-top: 7px;
 }
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-1 { 
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-1 {
   	overflow:hidden;
   	background: #d2d2d2;
   	padding: 5px 15px 5px 15px;
   	margin-left: -15px;
 }
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-2 { 
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-2 {
   	overflow:hidden;
   	background: #d2d2d2;
   	padding: 5px 15px 5px 15px;
@@ -110,10 +110,10 @@ i.resmio-editor-icon {
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .input-field-values {
 	padding-top: 0px;
 	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .float-left-id { 
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .float-left-id {
 	display: none;
 	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .three-half { 
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .three-half {
   	display: none;
 	}
 	textarea {
@@ -123,7 +123,7 @@ i.resmio-editor-icon {
 @media only screen and (min-width: 783px) {
 	/* width >= 783px */
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .one {
-  		float:left; 
+  		float:left;
   		width:490px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode {
@@ -150,11 +150,11 @@ i.resmio-editor-icon {
 
 	float: left;
 	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .float-left-id { 
-  	float:left; 
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .float-left-id {
+  	float:left;
   	margin-right: 15px;
 	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .one-half { 
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .one-half {
 	display: none;
 	}
 	input[type=text]{;
@@ -166,7 +166,7 @@ i.resmio-editor-icon {
 }
 @media only screen and (max-width: 1295px) {
 	/* width <= 1295px */
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .two { 
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .two {
   		display: none;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-button-update {
@@ -177,18 +177,18 @@ i.resmio-editor-icon {
 	box-shadow: none;
 	margin-top: 10px;
 	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-1 { 
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-1 {
   	display: none;
 	}
 }
 @media only screen and (min-width: 1296px) {
 	/* width >= 1296px */
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .two { 
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .two {
   		overflow:hidden;
   		float:left;
   		width:320px;
 	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-2 { 
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-2 {
   	display: none;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-button-update {
@@ -199,13 +199,13 @@ i.resmio-editor-icon {
 	box-shadow: none;
 	margin-left: 10px;
 	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .float-left { 
-  	float:left; 
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .float-left {
+  	float:left;
 	}
 }
 @media only screen and (min-width: 1050px) {
 	/* width >= 1050px */
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .widget-button-small { 
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .widget-button-small {
   		display: none;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w {
@@ -255,7 +255,7 @@ i.resmio-editor-icon {
 	}
 }
 
-.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .three-half { 
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .three-half {
   	overflow:hidden;
   	float:left;
 }
@@ -268,78 +268,78 @@ img.phone{
 	float: left;
 	height: 0px;
 	width: 0px;
-    padding:0px 22px 18px 0px;
+  padding:0px 22px 18px 0px;
 	background-image: url("../img/phone.svg");
-}img.email{
-  	display: inherit;
-  	float: left;
-  	height: 0px;
+}
+img.email{
+  display: inherit;
+  float: left;
+  height: 0px;
 	width: 0px;
-    padding:0px 22px 18px 0px;
-  	background-image: url("../img/email.svg");
-}img.facebook{
+  padding:0px 22px 18px 0px;
+  background-image: url("../img/email.svg");
+}
+img.facebook{
 	background-repeat: no-repeat;
-  	display:inherit;
-  	float: left;
-  	height: 0px;
+  display:inherit;
+  float: left;
+  height: 0px;
 	width: 0px;
-    padding:0px 22px 18px 0px;
-  	background-image: url("../img/facebook.svg");
-
+  padding:0px 22px 18px 0px;
+  background-image: url("../img/facebook.svg");
 }
 img.google-plus{
 	background-repeat: no-repeat;
-  	display:inherit;
-  	float: left;
-  	height: 0px;
+  display:inherit;
+  float: left;
+  height: 0px;
 	width: 0px;
-    padding:0px 22px 18px 0px;
-  	background-image: url("../img/google-plus.svg");
+  padding:0px 22px 18px 0px;
+  background-image: url("../img/google-plus.svg");
 }
 #example-page {
 	color: #333; background: #e5e5e5;
 }
- 
-#wrapper {
-	font-family: 'Calibri', 'sans-serif';
-	width: 850px; 
-	margin: auto; 
-	text-align: left; 
+
+#wrapper-resmio {
+	/*font-family: 'Calibri', 'sans-serif';*/
+	width: 850px;
+	margin: auto;
+	text-align: left;
 	background: #ffffff;
 	padding: 20px 20px 20px 20px;
 }
 
-#header {
-	height: 150px; 
+#header-resmio {
+	height: 150px;
 	padding: 0px;
 }
 
-#main {
-	width: 350px; 
-	padding: 20px; 
+#main-resmio {
+	width: 350px;
+	padding: 20px;
 	float: left;
 }
 
 @media screen and (max-width: 800px) {
-	#main { 
+	#main-resmio {
     float: none;
     width:auto;
     height:auto;
   }
 }
 
-#sidebar {
-	width: 300px; 
-	padding: 20px; 
+#sidebar-resmio {
+	width: 300px;
+	padding: 20px;
 	float: left;
 	overflow:hidden;
 }
 
-#footer {
-	clear: both; 
+#footer-resmio {
+	clear: both;
 }
 
-p.thick {
+p.thick-resmio {
     font-weight: bold;
 }
-
