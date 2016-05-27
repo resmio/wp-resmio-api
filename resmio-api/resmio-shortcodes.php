@@ -54,10 +54,10 @@ function get_rest_data( $atts, $content = null, $tag ) {
             $phone = $src["api_contact_phone"];
             $email = $src["api_contact_email"];
             if (!empty($phone)) {
-                $phone_1 = "<i class='fa fa-phone'>&nbsp;&nbsp;&nbsp;</i>".$phone."<br>";
+                $phone_1 = "<img class='phone'></img>&nbsp;".$phone."<br>";
             }
             if (!empty($email)) {
-                $email_1 = "<i class='fa fa-envelope'>&nbsp;&nbsp;</i>".$email;
+                $email_1 = "<img class='email'></img>&nbsp;".$email;
             }
             return $phone_1.$email_1;
             break;
@@ -79,14 +79,14 @@ function get_rest_data( $atts, $content = null, $tag ) {
             $facebook = $src["api_social_facebook"];
             $google = $src["api_social_google"];
             if (!empty($facebook)){
-                $facebook_1 = "<i class='fa fa-facebook-square'></i>&nbsp;&nbsp;</i>".$facebook."<br>";
+                $facebook_1 = "<img class='facebook'></img>&nbsp;".$facebook."<br>";
             }
             if (!empty($google)){
-                $google_1 = "<i class='fa fa-google-plus-square'></i>&nbsp;&nbsp;</i>".$google;
+                $google_1 = "<img class='google-plus'></img>&nbsp;".$google;
             }
             return $facebook_1.$google_1;
             break;
-       
+
         case "resmio-openinghours":
             $src = get_option('resmio_admin_menu_api_options');
             $openingDays1 = $src["api_openh_r1_left"];
@@ -118,7 +118,7 @@ function get_rest_data( $atts, $content = null, $tag ) {
         }      
         if (!empty($openingDays4) & !empty($openingHours4)) {
             $openDay[3] = "<tr style='border:none;'><td style='border:none; padding:0px;'>".$openingDays4;
-            $openHour[3] = "</td><td style='border:none; padding:0px;>&nbsp;".$openingHours4."</td></tr>";
+            $openHour[3] = "</td><td style='border:none; padding:0px;'>&nbsp;".$openingHours4."</td></tr>";
         }    
         if (!empty($openingDays5) & !empty($openingHours5)) {
             $openDay[4] = "<tr style='border:none;'><td style='border:none; padding:0px;'>".$openingDays5;
