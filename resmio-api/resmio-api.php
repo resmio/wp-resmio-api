@@ -20,7 +20,7 @@ function add_resmio_admin_menu() {
 		'resmio_admin_menu_main_options',											// The unique ID - that is, the slug - for this menu item
 		'resmio_admin_menu_display'													// The name of the function to call when rendering this menu's page
 	);
-	
+
 	add_submenu_page(
 		'resmio_admin_menu_main_options',											// The ID of the top-level menu page
 		'resmio API',																// The value for the browser's title bar
@@ -46,19 +46,19 @@ function resmio_admin_menu_display() {
 <?php
 }
 
-/** 
- * Default input values (resmio_admin_menu_api_options) 
+/**
+ * Default input values (resmio_admin_menu_api_options)
  */
 function resmio_admin_menu_default_api_options() {
 	$defaults = array();
 	return apply_filters( 'resmio_admin_menu_default_api_options', $defaults );
 }
 
-/** 
- * Initialize function (resmio_admin_menu_api_options) 
+/**
+ * Initialize function (resmio_admin_menu_api_options)
  */
 function initialize_resmio_admin_menu_api_options() {
-	if( get_option( 'resmio_admin_menu_api_options' ) == false ) {	
+	if( get_option( 'resmio_admin_menu_api_options' ) == false ) {
 		add_option( 'resmio_admin_menu_api_options', apply_filters( 'resmio_admin_menu_default_api_options', resmio_admin_menu_default_api_options() ) );
 	}
 
@@ -87,8 +87,8 @@ function my_theme_setup(){
     load_theme_textdomain( 'resmio_i18n', get_template_directory() . '/languages' );
 }
 
-/** 
- * Callback function (resmio_admin_menu_api_options -> api_sec_update [Settings-Section]) 
+/**
+ * Callback function (resmio_admin_menu_api_options -> api_sec_update [Settings-Section])
  */
 function api_sec_update_callback() {
 	?>
@@ -101,7 +101,7 @@ function api_sec_update_callback() {
 }
 
 /**
- * Callback function (resmio_admin_menu_api_options -> api_sec_update [Settings-Section] -> api_sec_update_field_input [Settings-Field]) 
+ * Callback function (resmio_admin_menu_api_options -> api_sec_update [Settings-Section] -> api_sec_update_field_input [Settings-Field])
  */
 function resmio_api_data_update() {
 	$get_api_data = get_transient( 'resmio_api_data_save' );
@@ -115,11 +115,11 @@ function resmio_api_data_update() {
 	?>
 	<form id="resmio-admin-menu-form-api-options" method="post" action="" enctype="multipart/form-data">
 	<?php
-	
+
 	// register the $_POST variable
 	$resmio_api_id = $_POST['resmio-facility-id'];
 	$optionsInput = $_POST['resmio_admin_menu_api_options'];
-	
+
 	// if save button hit
 	if( $_POST['save']  ) {
 		// if no resmio id set
@@ -133,7 +133,7 @@ function resmio_api_data_update() {
 			$api_data = get_resmio_api_data($resmio_api_id);
 			delete_transient( 'resmio_api_data_save' );
 			set_transient( 'resmio_api_data_save', $api_data );
-			
+
 			$get_api_data = get_transient( 'resmio_api_data_save' );
 
 			$facilityName = $get_api_data["name"]; if ($facilityName == "") {$facilityNameStr = "";} else {$facilityNameStr = $facilityName;}
@@ -149,7 +149,7 @@ function resmio_api_data_update() {
 			$facilityOpening = $get_api_data["opening_hours"];
 			if ($facilityOpening == "") {
 				$facilityOpeningStr = "";
-			} 
+			}
 			elseif (is_array($facilityOpening)) {
 				$loopCount = 0;
 				$facilityOpeningStr = array();
@@ -181,7 +181,7 @@ function resmio_api_data_update() {
 			else {
 				$facilityOpeningStr = $facilityOpening;
 			}
-			
+
 			$options['api_restaurant_name'] = $facilityNameStr;
 			$options['api_address_street'] = $facilityStreetStr;
 			$options['api_address_zip'] = $facilityZipStr;
@@ -210,7 +210,7 @@ function resmio_api_data_update() {
 						$options['api_openh_r'.$x.'_right'] = "";
 					}
 				}
-			} 
+			}
 			else {
 				$options['api_openh_r1_left'] = "Info";
 				$options['api_openh_r1_right'] = $facilityOpeningStr;
@@ -218,19 +218,19 @@ function resmio_api_data_update() {
 					$options['api_openh_r'.$x.'_left'] = "";
 					$options['api_openh_r'.$x.'_right'] = "";
 				}
-			}		
+			}
 			update_option('resmio_admin_menu_api_options', $options);
-			
+
 			echo "<SCRIPT LANGUAGE='JavaScript'>
-			window.location='". admin_url('/'). "admin.php?page=resmio_admin_menu_api_options&saved=true" . "';
+			window.location='". admin_url('/'). "options-general.php?page=resmio_admin_menu_main_options&saved=true" . "';
 			</script>";
 		}
-	} 
+	}
 	// if update button hit
 	else if( $_POST['update']  ) {
 		$get_resmio_api_data = get_option('resmio-facility-id');
 		update_option('resmio_admin_menu_api_options', $optionsInput);
-		
+
 		// if no resmio id set
 		if( !isset($get_resmio_api_data) ) {
 			echo '<div class="error"><p><strong>'.__('resmio ID nicht gespeichert', 'resmio_i18n').'</strong></p></div>';
@@ -238,7 +238,7 @@ function resmio_api_data_update() {
 		// if resmio id set
 		else {
 			echo "<SCRIPT LANGUAGE='JavaScript'>
-			window.location='". admin_url('/'). "admin.php?page=resmio_admin_menu_api_options&update=true" . "';
+			window.location='". admin_url('/'). "options-general.php?page=resmio_admin_menu_main_options&update=true" . "';
 			</script>";
 		}
 	}
@@ -269,36 +269,44 @@ function resmio_api_data_update() {
 	if( isset( $options['api_descr_short'] ) ) { $apiDescrShrt = $options['api_descr_short']; } else { $apiDescrShrt = ''; }
 
 	if( $get_api_data == FALSE ):
-	echo '<div class="error fade"><p><strong>'.__('Ungültige ID', 'resmio_i18n').'</strong></p></div>'; 
+	echo '<div class="error fade"><p><strong>'.__('Ungültige ID', 'resmio_i18n').'</strong></p></div>';
 	echo '<p><strong>'.__('Noch keine resmio ID? Melden Sie sich <a href="https://www.resmio.com" target="_blank">hier</a> kostenlos an!', 'resmio_i18n').'</strong></p><br>';
-
-	else: 
 	?>
-	<body onload="additionalOpenHours()">
-	</body>
-	<head>
-	<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	</head> 
+	<p><?php _e('Schritt 1 - Gib die ID des Restaurants ein und importiere deine Restaurantinformationen', 'resmio_i18n'); ?>&nbsp;<?php _e('(Noch keine resmio ID? Melden Sie sich <a href="https://www.resmio.com" target="_blank">hier</a> kostenlos an).', 'resmio_i18n'); ?></p>
+	<br>
+	<p class="float-left-id"><?php _e('resmio ID', 'resmio_i18n'); ?></p>
+	<input class="input-field-id" size="20" id="resmio-facility-id" name="resmio-facility-id" type="text" placeholder="the-fish" value="<?php echo get_option('resmio-facility-id'); ?>" />
+	<?php echo '<input name="save" type="submit" class="button-primary button" value="'.__('Daten importieren', 'resmio_i18n').'" />'; ?>
+	<input type="hidden" name="action" value="save" />
+	<br>
+	<br>
+	<br>
+	<?php $alert_message = __("Bist du dir sicher, dass du die Daten der resmio API übernehmen willst? Die aktuellen Werte werden damit überschrieben!", 'resmio_i18n' ); ?>
+	<p class="float-left"><?php _e('Schritt 2 - Bearbeite deine Restaurantinformationen und speichere diese anschließend für deine WordPress Webseite.', 'resmio_i18n'); ?></p>
+	<input type="hidden" name="action" value="update" />
+	<?php
+	else:
+	?>
 	<script type = "text/javascript" language = "javascript">
-		function additionalOpenHours() {
+		$( document ).ready(function {
 			var php_var = "<?php echo $apiOpenR3L; ?>";
 			if (php_var) {
 				$('#api_openh_r3_left').on('input',function(){
-    				if( ($(this).val() != 0))
+						if( ($(this).val() != 0))
 						$("#openHoursHide").show();
-					else 
-        				$("#openHoursHide").hide();
-    			});
+					else
+								$("#openHoursHide").hide();
+					});
 			} else {
 				$("#openHoursHide").hide();
 				$('#api_openh_r3_left').on('input',function(){
-    				if( ($(this).val() != 0))
+						if( ($(this).val() != 0))
 						$("#openHoursHide").show();
-					else 
-       				$("#openHoursHide").hide();
-   				});
+					else
+							$("#openHoursHide").hide();
+					});
 			}
-		}
+		});
 	</script>
 	<p><?php _e('Schritt 1 - Gib die ID des Restaurants ein und importiere deine Restaurantinformationen', 'resmio_i18n'); ?>&nbsp;<?php _e('(Noch keine resmio ID? Melden Sie sich <a href="https://www.resmio.com" target="_blank">hier</a> kostenlos an).', 'resmio_i18n'); ?></p>
 	<br>
@@ -315,7 +323,6 @@ function resmio_api_data_update() {
 	<input type="hidden" name="action" value="update" />
 	<br>
 	<br>
-	<?php endif; ?>
 	<div class="wrapper-head-1">
     	<div class="one">
     		<p><b><?php _e('Felder', 'resmio_i18n'); ?></b></p>
@@ -400,7 +407,7 @@ function resmio_api_data_update() {
 	<div class="wrapper">
     	<div class="one">
 			<p class="label-for-values"><?php _e('(Adresse)', 'resmio_i18n'); ?>
-			<p class="label-for-values-4"><?php _e('(Straße, Postleitzahl & Ort)', 'resmio_i18n'); ?></p>    		
+			<p class="label-for-values-4"><?php _e('(Straße, Postleitzahl & Ort)', 'resmio_i18n'); ?></p>
 		</div>
     	<div class="two">
     		<p class="label-for-shortcode-value"><?php echo do_shortcode('[resmio-address]'); ?>&nbsp;</p>
@@ -439,8 +446,8 @@ function resmio_api_data_update() {
 	</div>
 	<div class="wrapper">
     	<div class="one">
-    		<p class="label-for-values"><?php _e('(Kontakt)', 'resmio_i18n'); ?></p>    					
-    		<p><?php _e('(Telefon & E-Mail)', 'resmio_i18n'); ?></p>    		
+    		<p class="label-for-values"><?php _e('(Kontakt)', 'resmio_i18n'); ?></p>
+    		<p><?php _e('(Telefon & E-Mail)', 'resmio_i18n'); ?></p>
 		</div>
     	<div class="two">
     		<p class="label-for-shortcode-value"><?php echo do_shortcode('[resmio-contact]'); ?>&nbsp;</p>
@@ -600,6 +607,7 @@ function resmio_api_data_update() {
     		<div class="label-for-shortcode-b-2">[resmio-button]</div>
     	</div>
     </div>
+		<?php endif; ?>
     <br>
     <br>
     <?php $alert_message = __("Bist du dir sicher, dass du die Daten der resmio API übernehmen willst? Die aktuellen Werte werden damit überschrieben!", 'resmio_i18n' ); ?>
@@ -614,7 +622,7 @@ if( !function_exists('get_resmio_api_data') ):
 // function get_resmio_api_data($key='', $id='') {
 function get_resmio_api_data($id='') {
 	$http = (!empty($_SERVER['HTTPS'])) ? "https" : "http";
-	
+
 	$resmio_api_url_a = 'https://api.resmio.com/v1/facility/' . $id;
 	$response = wp_remote_retrieve_body( wp_remote_get($resmio_api_url_a, array('sslverify' => false )));
 	if( is_wp_error( $response ) ) {
