@@ -288,22 +288,22 @@ function resmio_api_data_update() {
 	else:
 	?>
 	<script type = "text/javascript" language = "javascript">
-		$( document ).ready(function {
+		jQuery( document ).ready(function() {
 			var php_var = "<?php echo $apiOpenR3L; ?>";
 			if (php_var) {
-				$('#api_openh_r3_left').on('input',function(){
-						if( ($(this).val() != 0))
-						$("#openHoursHide").show();
+				jQuery('#api_openh_r3_left').on('input',function(){
+						if( (jQuery(this).val() != 0))
+						jQuery("#openHoursHide").show();
 					else
-								$("#openHoursHide").hide();
+								jQuery("#openHoursHide").hide();
 					});
 			} else {
-				$("#openHoursHide").hide();
-				$('#api_openh_r3_left').on('input',function(){
-						if( ($(this).val() != 0))
-						$("#openHoursHide").show();
+				jQuery("#openHoursHide").hide();
+				jQuery('#api_openh_r3_left').on('input',function(){
+						if( (jQuery(this).val() != 0))
+						jQuery("#openHoursHide").show();
 					else
-							$("#openHoursHide").hide();
+							jQuery("#openHoursHide").hide();
 					});
 			}
 		});
