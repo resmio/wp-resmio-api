@@ -266,24 +266,21 @@ i.resmio-editor-icon {
 img.phone{
 	display: inherit;
 	float: left;
-	height: 0px;
-	width: 0px;
-    padding:0px 22px 18px 0px;
+	height: 20px;
+	width: 20px;
 	background-image: url("../img/phone.svg");
 }img.email{
-  	display: inherit;
+	display:inherit;
   	float: left;
-  	height: 0px;
-	width: 0px;
-    padding:0px 22px 18px 0px;
+  	height: 20px;
+	width: 20px;
   	background-image: url("../img/email.svg");
 }img.facebook{
 	background-repeat: no-repeat;
   	display:inherit;
   	float: left;
-  	height: 0px;
-	width: 0px;
-    padding:0px 22px 18px 0px;
+  	height: 18px;
+	width: 18px;
   	background-image: url("../img/facebook.svg");
 
 }
@@ -291,16 +288,15 @@ img.google-plus{
 	background-repeat: no-repeat;
   	display:inherit;
   	float: left;
-  	height: 0px;
-	width: 0px;
-    padding:0px 22px 18px 0px;
+  	height: 18px;
+	width: 18px;
   	background-image: url("../img/google-plus.svg");
 }
-#example-page {
+.resmio-example-page {
 	color: #333; background: #e5e5e5;
 }
  
-#wrapper {
+.resmio-wrapper {
 	font-family: 'Calibri', 'sans-serif';
 	width: 850px; 
 	margin: auto; 
@@ -309,37 +305,32 @@ img.google-plus{
 	padding: 20px 20px 20px 20px;
 }
 
-#header {
+.resmio-header {
 	height: 150px; 
 	padding: 0px;
 }
 
-#main {
+.resmio-main {
 	width: 350px; 
 	padding: 20px; 
 	float: left;
 }
 
 @media screen and (max-width: 800px) {
-	#main { 
+	.resmio-main { 
     float: none;
     width:auto;
     height:auto;
   }
 }
 
-#sidebar {
+.resmio-sidebar {
 	width: 300px; 
 	padding: 20px; 
 	float: left;
 	overflow:hidden;
 }
 
-#footer {
+.resmio-footer {
 	clear: both; 
 }
-
-p.thick {
-    font-weight: bold;
-}
-
