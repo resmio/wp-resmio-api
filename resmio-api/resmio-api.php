@@ -501,7 +501,7 @@ function resmio_api_data_update() {
     		<label class="label-for-values" for="api_descr">
 				<p><?php _e('Text', 'resmio_i18n'); ?></p>
 			</label>
-			<textarea class="input-field-values" id="api_descr" rows="7" cols="36" name="resmio_admin_menu_api_options[api_descr]"><?php echo $apiDescr; ?></textarea>
+			<textarea class="input-field-values" id="api_descr" rows="7" cols="34" name="resmio_admin_menu_api_options[api_descr]"><?php echo $apiDescr; ?></textarea>
 		</div>
 		<div class="two">
     		<p class="label-for-shortcode-value"><?php echo do_shortcode('[resmio-description]'); ?>&nbsp;</p>
