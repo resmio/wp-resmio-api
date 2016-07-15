@@ -38,6 +38,12 @@ i.resmio-editor-icon {
   	background: #d2d2d2;
   	padding: 5px 15px 5px 15px;
 }
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-color-picker { 
+  	width: 75px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .distance-to-end { 
+  	margin-top: 40px;
+}
 @media only screen and (max-width: 400px) {
 	/* width <= 400px */
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .form-table td input[type="text"] {
@@ -52,6 +58,13 @@ i.resmio-editor-icon {
 		margin-right: 10px;
 		margin-top: 9px;
 		float: left;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w {
+		color: #00a7c4;
+		float: left;
+		padding-top: 15px;
+		margin-left: 0px;
+		padding-bottom: 20px;
 	}
 }
 @media only screen and (min-width: 401px) and (max-width: 500px) {
@@ -87,34 +100,34 @@ i.resmio-editor-icon {
 @media only screen and (max-width: 782px) {
 	/* width <= 782px */
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .button-primary {
-	margin-top: 12px;
+		margin-top: 12px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode {
-	color: #00a7c4;
-	margin-left: 90px;
-	margin-top: 0px;
+		color: #00a7c4;
+		margin-left: 90px;
+		margin-top: 0px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-values {
-	float:left;
-	width:85px;
-	margin-top: 0px;
+		float:left;
+		width:85px;
+		margin-top: 0px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-values-2 {
-	float:left;
-	width: 85px;
+		float:left;
+		width: 85px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-values-3 {
-	float:left;
-	width: 85px;
+		float:left;
+		width: 85px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .input-field-values {
-	padding-top: 0px;
+		padding-top: 0px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .float-left-id { 
-	display: none;
+		display: none;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .three-half { 
-  	display: none;
+  		display: none;
 	}
 	textarea {
 		border-radius:5px;
@@ -127,35 +140,34 @@ i.resmio-editor-icon {
   		width:490px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode {
-	color: #00a7c4;
+		color: #00a7c4;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-values {
-	float:left;
-	width:150px;
+		float:left;
+		width:150px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-values-2 {
-	float:left;
-	width: 60px;
+		float:left;
+		width: 60px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-values-3 {
-	float:left;
-	width: 60px;
-	margin-left:80px;
+		float:left;
+		width: 60px;
+		margin-left:80px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .input-field-values-2 {
-	float:left;
+		float:left;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .input-field-id {
-	margin-right: 10px;
-
-	float: left;
+		margin-right: 10px;
+		float: left;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .float-left-id { 
-  	float:left; 
-  	margin-right: 15px;
+  		float:left; 
+  		margin-right: 15px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .one-half { 
-	display: none;
+		display: none;
 	}
 	input[type=text]{;
 		border-radius:5px;
@@ -170,15 +182,15 @@ i.resmio-editor-icon {
   		display: none;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-button-update {
-	background-color: #22ccaa;
-	text-shadow: none;
-	color: #ffffff;
-	border-color: #22ccaa;
-	box-shadow: none;
-	margin-top: 10px;
+		background-color: #22ccaa;
+		text-shadow: none;
+		color: #ffffff;
+		border-color: #22ccaa;
+		box-shadow: none;
+		margin-top: 10px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-1 { 
-  	display: none;
+  		display: none;
 	}
 }
 @media only screen and (min-width: 1296px) {
@@ -189,72 +201,86 @@ i.resmio-editor-icon {
   		width:320px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-2 { 
-  	display: none;
+  		display: none;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-button-update {
-	background-color: #22ccaa;
-	text-shadow: none;
-	color: #ffffff;
-	border-color: #22ccaa;
-	box-shadow: none;
-	margin-left: 10px;
+		background-color: #22ccaa;
+		text-shadow: none;
+		color: #ffffff;
+		border-color: #22ccaa;
+		box-shadow: none;
+		margin-left: 10px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .float-left { 
-  	float:left; 
+  		float:left; 
 	}
 }
 @media only screen and (min-width: 1050px) {
 	/* width >= 1050px */
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .widget-button-small { 
-  		display: none;
-	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w {
-	color: #00a7c4;
-	float: left;
-	margin-top: 20px;
-	margin-left: 20px;
-	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-widget {
 		float: left;
 	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-b {
-	  	float: left;
-	  	color: #00a7c4;
-	  	margin-top: 20px;
-	  	margin-left: 20px;
-	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-button {
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w {
+		color: #00a7c4;
 		float: left;
-		margin-top: 10px;
-		margin-left: 150px;
+		padding-top: 20px;
+		padding-left: 20px;
 	}
 }
 @media only screen and (max-width: 1049px) {
 	/* width <= 1049px */
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .widget-button-big-left { 
+  		width: 540px;
+  		float: left;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .widget-button-big-right { 
+  		width: 540px;
+  		float: left;
+	}
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-widget {
+		float: left;
+		padding-right: 20px;
+	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w {
-		display: none;
+		color: #00a7c4;
+		padding-top: 15px;
+		padding-left: 177px;
+		padding-bottom: 20px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-button {
-		display: none;
+		float: left;
+		margin-top: 10px;
+
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-b {
-		display: none;
-	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-w-2 {
-		color: #00a7c4;
-		margin-left: 170px;
-		margin-bottom: 30px;
-	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-b-2 {
-	  	color: #00a7c4;
 	  	float: left;
+	  	color: #00a7c4;
+	  	padding-top: 20px;
+	  	padding-left: 20px;
 	}
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-button-2 {
-		float: left;
-		width: 170px;
+	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-button-color {
+		padding-top: 80px;
 	}
 }
 
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .widget-button-big-left { 
+	width: 540px;
+	float: left;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-button {
+	float: left;
+	margin-top: 10px;
+
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-b {
+  	float: left;
+  	color: #00a7c4;
+  	padding-top: 20px;
+  	padding-left: 20px;
+}
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-button-color {
+	padding-top: 80px;
+}
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .three-half { 
   	overflow:hidden;
   	float:left;
@@ -266,14 +292,14 @@ i.resmio-editor-icon {
 img.phone{
 	display: inherit;
 	float: left;
-	height: 20px;
-	width: 20px;
+	height: 19px;
+	width: 19px;
 	background-image: url("../img/phone.svg");
 }img.email{
 	display:inherit;
   	float: left;
-  	height: 20px;
-	width: 20px;
+  	height: 19px;
+	width: 19px;
   	background-image: url("../img/email.svg");
 }img.facebook{
 	background-repeat: no-repeat;

@@ -152,8 +152,46 @@ function get_rest_data( $atts, $content = null, $tag ) {
             break;
        
         case "resmio-button":
-            $id = get_option('resmio-facility-id');            
-            $buttonCode =  '<script data-resmio-button="'.$id.'">
+            $id = get_option('resmio-facility-id');
+
+            $srcBtnBG = get_option('resmio_admin_menu_api_options');
+            $resmioBtnBG = $srcBtnBG["resmio-color-picker-button-background"];
+
+            $srcBtnText = get_option('resmio_admin_menu_api_options');
+            $resmioBtnText = $srcBtnText["resmio-color-picker-button-text"];
+
+            $resmioBtnBGLighten = adjustBrightness($resmioBtnBG, 10);
+            $resmioBtnBGDarken = adjustBrightness($resmioBtnBG, -10);
+                       
+            if (($resmioBtnBG !='') && ($resmioBtnText !='')) {
+                $buttonCode = '
+                    <style type="text/css" media="all">
+                        .resmio-button .btn {
+                          background-color: '.$resmioBtnBG.';
+                          background-image: linear-gradient(top,'.$resmioBtnBGLighten.','.$resmioBtnBG.');
+                          background-image: -webkit-linear-gradient(top,'.$resmioBtnBGLighten.','.$resmioBtnBG.');
+                          background-image: -o-linear-gradient(top,'.$resmioBtnBGLighten.','.$resmioBtnBG.');
+                          background-image: -moz-linear-gradient(top,'.$resmioBtnBGLighten.','.$resmioBtnBG.');
+                          background-image: -ms-linear-gradient(top,'.$resmioBtnBGLighten.','.$resmioBtnBG.');
+                          border-style: 1px solid '.$resmioBtnBGLighten.';
+                          border-color: '.$resmioBtnBGLighten.';
+                          color: '.$resmioBtnText.';
+                        }
+                        .resmio-button .btn:hover, .resmio-button .btn:focus {
+                          background-color: '.$resmioBtnBGDarken.';
+                          background-image: linear-gradient(top,'.$resmioBtnBG.','.$resmioBtnBGDarken.');
+                          background-image: -webkit-linear-gradient(top,'.$resmioBtnBG.','.$resmioBtnBGDarken.');
+                          background-image: -o-linear-gradient(top,'.$resmioBtnBG.','.$resmioBtnBGDarken.');
+                          background-image: -moz-linear-gradient(top,'.$resmioBtnBG.','.$resmioBtnBGDarken.');
+                          background-image: -ms-linear-gradient(top,'.$resmioBtnBG.','.$resmioBtnBGDarken.');
+                          border-style: 1px solid '.$resmioBtnBG.';
+                          border-color: '.$resmioBtnBG.';
+                          color: '.$resmioBtnText.';
+                        }
+                    </style>
+                ';
+            }
+            $buttonCode .=  '<script data-resmio-button="'.$id.'">
                                 (function(d, s) {
                                     var js, rjs = d.getElementsByTagName(s)[0];
                                     js = d.createElement(s);
