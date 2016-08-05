@@ -1,7 +1,7 @@
 .wp-admin .resmio-admin-menu table.form-table > tbody > tr > th {
 	display: none;
 }
-	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .button-primary {
+.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .button-primary {
 	background-color: #00a7c4;
 	text-shadow: none;
 	color: #ffffff;
@@ -16,35 +16,34 @@
 	box-shadow: none;
 }
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options a {
-    display: inline-block;
+  display: inline-block;
 }
 .resmio-editor-icon {
 	background-image: url('../img/resmio-icon.png');
 }
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper {
-  	overflow:hidden;
-  	padding-bottom: 7px;
+  overflow:hidden;
+  padding-bottom: 7px;
 	padding-top: 7px;
 }
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-1 {
-  	overflow:hidden;
-  	background: #d2d2d2;
-  	padding: 5px 15px 5px 15px;
-  	margin-left: -15px;
+  overflow:hidden;
+  background: #d2d2d2;
+  padding: 5px 15px 5px 15px;
+  margin-left: -15px;
 }
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .wrapper-head-2 {
-  	overflow:hidden;
-  	background: #d2d2d2;
-  	padding: 5px 15px 5px 15px;
+  overflow:hidden;
+  background: #d2d2d2;
+  padding: 5px 15px 5px 15px;
 }
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .resmio-color-picker {
-  	width: 75px;
+  width: 75px;
 }
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .distance-to-end {
-  	margin-top: 40px;
+  margin-top: 40px;
 }
 @media only screen and (max-width: 400px) {
-	/* width <= 400px */
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .form-table td input[type="text"] {
 		border-radius:5px;
 		width: 202px;
@@ -67,7 +66,6 @@
 	}
 }
 @media only screen and (min-width: 401px) and (max-width: 500px) {
-	/* 401px <= 500px */
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .form-table td input[type="text"] {
 		border-radius:5px;
 		width: 280px;
@@ -82,7 +80,6 @@
 	}
 }
 @media only screen and (min-width: 501px) and (max-width: 782px) {
-	/* 501px <= 782px */
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .form-table td input[type="text"] {
 		border-radius:5px;
 		width: 350px;
@@ -97,7 +94,6 @@
 	}
 }
 @media only screen and (max-width: 782px) {
-	/* width <= 782px */
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .button-primary {
 		margin-top: 12px;
 	}
@@ -229,8 +225,8 @@
 @media only screen and (max-width: 1049px) {
 	/* width <= 1049px */
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .widget-button-big-left {
-  		width: 540px;
-  		float: left;
+  	width: 540px;
+  	float: left;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .widget-button-big-right {
   		width: 540px;
@@ -252,10 +248,10 @@
 
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-b {
-	  	float: left;
-	  	color: #00a7c4;
-	  	padding-top: 20px;
-	  	padding-left: 20px;
+	  float: left;
+	  color: #00a7c4;
+	  padding-top: 20px;
+	  padding-left: 20px;
 	}
 	.wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-button-color {
 		padding-top: 80px;
@@ -272,17 +268,17 @@
 
 }
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-b {
-  	float: left;
-  	color: #00a7c4;
-  	padding-top: 20px;
-  	padding-left: 20px;
+  float: left;
+  color: #00a7c4;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-button-color {
 	padding-top: 80px;
 }
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .three-half {
-  	overflow:hidden;
-  	float:left;
+  overflow:hidden;
+  float:left;
 }
 .wp-admin .resmio-admin-menu .resmio-admin-menu-api-options .label-for-shortcode-value {
   	width:250px;
@@ -300,7 +296,7 @@ phone{
   float: left;
   height: 19px;
 	width: 19px;
-  	background-image: url("../img/email.svg");
+  background-image: url("../img/email.svg");
 }
 .facebook{
 	background-repeat: no-repeat;
@@ -312,11 +308,11 @@ phone{
 }
 .google-plus{
 	background-repeat: no-repeat;
-  	display:inherit;
-  	float: left;
-  	height: 18px;
+  display:inherit;
+  float: left;
+  height: 18px;
 	width: 18px;
-  	background-image: url("../img/google-plus.svg");
+  background-image: url("../img/google-plus.svg");
 }
 .resmio-example-page {
 	color: #333; background: #e5e5e5;
