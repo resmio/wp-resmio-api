@@ -1,5 +1,4 @@
 <?php
-
 require("resmio-shortcodes.php");
 /**
 * Load custom backend css file
@@ -9,6 +8,20 @@ function load_admin_styles() {
 	wp_enqueue_style('resmiocss', get_stylesheet_directory_uri().'/resmio-api/css/resmio-style.css');
 }
 
+add_action( 'admin_enqueue_scripts', 'resmio_color_picker' );
+function resmio_color_picker( $hook_suffix ) {
+    // first check that $hook_suffix is appropriate for your admin page
+    wp_enqueue_style( 'wp-color-picker' );
+	wp_enqueue_script( 'wp-color-picker' );
+}
+
+/*
+add_action( 'admin_enqueue_scripts', 'resmio_color_picker' );
+function resmio_color_picker() {
+	wp_enqueue_script( 'iris',get_template_directory_uri().'/resmio-api/js/iris.min.js' );
+ 	wp_enqueue_script( 'iris-init',get_template_directory_uri().'/resmio-api/js/iris-init.js' );
+}
+*/
 /**
  * This function introduces the theme options into the 'Appearance' menu
  */
@@ -267,6 +280,8 @@ function resmio_api_data_update() {
 	if( isset( $options['api_openh_r7_right'] ) ) { $apiOpenR7R = $options['api_openh_r7_right']; } else { $apiOpenR7R = ''; }
 	if( isset( $options['api_descr'] ) ) { $apiDescr = $options['api_descr']; } else { $apiDescr = ''; }
 	if( isset( $options['api_descr_short'] ) ) { $apiDescrShrt = $options['api_descr_short']; } else { $apiDescrShrt = ''; }
+	if( isset( $options['resmio-color-picker-button-background'] ) ) { $buttonColorBG = $options['resmio-color-picker-button-background']; } else { $buttonColorBG = ''; }
+	if( isset( $options['resmio-color-picker-button-text'] ) ) { $buttonColorText = $options['resmio-color-picker-button-text']; } else { $buttonColorText = ''; }
 
 	if( $get_api_data == FALSE ):
 	echo '<div class="error fade"><p><strong>'.__('Ungültige ID', 'resmio_i18n').'</strong></p></div>';
@@ -289,6 +304,7 @@ function resmio_api_data_update() {
 	?>
 	<script type = "text/javascript" language = "javascript">
 		jQuery( document ).ready(function() {
+			// ADDITIONAL DAYS
 			var php_var = "<?php echo $apiOpenR3L; ?>";
 			if (php_var) {
 				jQuery('#api_openh_r3_left').on('input',function(){
@@ -306,6 +322,20 @@ function resmio_api_data_update() {
 							jQuery("#openHoursHide").hide();
 					});
 			}
+			// COLOR PICKER
+			var cPOptions = {
+		    	// you can declare a default color here, or in the data-default-color attribute on the input
+		    	defaultColor: false,
+		    	// a callback to fire whenever the color changes to a valid color
+		    	change: function(event, ui){},
+		    	// a callback to fire when the input is emptied or an invalid color
+		    	clear: function() {},
+		    	// hide the color picker controls on load
+		    	hide: true,
+		    	// show a group of common colors beneath the square or, supply an array of colors to customize further
+		    	palettes: true
+			};
+			jQuery('.resmio-color-picker').wpColorPicker(cPOptions);
 		});
 	</script>
 	<p><?php _e('Schritt 1 - Gib die ID des Restaurants ein und importiere deine Restaurantinformationen', 'resmio_i18n'); ?>&nbsp;<?php _e('(Noch keine resmio ID? Melden Sie sich <a href="https://www.resmio.com" target="_blank">hier</a> kostenlos an).', 'resmio_i18n'); ?></p>
@@ -594,25 +624,26 @@ function resmio_api_data_update() {
 	</div>
 	<div class="wrapper">
     	<div class="widget-button-big">
-    		<div class="label-for-shortcode-widget"><?php echo do_shortcode('[resmio-widget]'); ?>&nbsp;</div>
-    		<div class="label-for-shortcode-w">[resmio-widget]</div>
-    		<div class="label-for-shortcode-button"><?php echo do_shortcode('[resmio-button]'); ?>&nbsp;</div>
-    		<div class="label-for-shortcode-b">[resmio-button]</div>
-    	</div>
+    		<div class="widget-button-big-left">
+	    		<div class="label-for-shortcode-widget"><?php echo do_shortcode('[resmio-widget]'); ?>&nbsp;</div>
+	    		<div class="label-for-shortcode-w">[resmio-widget]</div>		
+			</div>
+			<div class="widget-button-big-right">
+				<div class="label-for-shortcode-button"><?php echo do_shortcode('[resmio-button]'); ?>&nbsp;</div>
+	    		<div class="label-for-shortcode-b">[resmio-button]</div>
+	    		<div class="label-for-button-color"><p><b><?php _e('Farbeinstellungen für den Button', 'resmio_i18n'); ?></b></p></div>
+	    		<div class="label-for-button-color-info-text wrapper"><p><?php _e('Schriftfarbe Button ändern:', 'resmio_i18n'); ?></p></div>
+				<div class="label-for-button-color-text wrapper"><input type="text" class="resmio-color-picker" id='resmio-color-picker-button-text' name="resmio_admin_menu_api_options[resmio-color-picker-button-text]" value="<?php echo $buttonColorText; ?>" /></div>
+			    <div class="label-for-button-color-info-background wrapper"><p><?php _e('Hintergrundfarbe Button ändern:', 'resmio_i18n'); ?></p></div>
+			    <div class="label-for-button-color-background wrapper"><input type="text" class="resmio-color-picker" id='resmio-color-picker-button-background' name="resmio_admin_menu_api_options[resmio-color-picker-button-background]" value="<?php echo $buttonColorBG; ?>" /></div>
+		    </div>
+		</div>
     </div>
-    <div class="wrapper">
-    	<div class="widget-button-small">
-   			<div class="label-for-shortcode-w-2">[resmio-widget]</div>
-    		<div class="label-for-shortcode-button-2"><?php echo do_shortcode('[resmio-button]'); ?>&nbsp;</div>
-    		<div class="label-for-shortcode-b-2">[resmio-button]</div>
-    	</div>
-    </div>
-		<?php endif; ?>
-    <br>
-    <br>
-    <?php $alert_message = __("Bist du dir sicher, dass du die Daten der resmio API übernehmen willst? Die aktuellen Werte werden damit überschrieben!", 'resmio_i18n' ); ?>
-	<input name="update" type="submit" class="resmio-button-update-end button" onclick="return confirm('<?php echo $alert_message; ?>')" value="<?php echo esc_attr(__('Daten speichern','resmio_i18n')); ?>" />
-	<input type="hidden" name="action" value="update" />
+	<div class="distance-to-end"/>
+			<?php endif; ?>
+	    <?php $alert_message = __("Bist du dir sicher, dass du die Daten der resmio API übernehmen willst? Die aktuellen Werte werden damit überschrieben!", 'resmio_i18n' ); ?>
+		<input name="update" type="submit" class="resmio-button-update-end button" onclick="return confirm('<?php echo $alert_message; ?>')" value="<?php echo esc_attr(__('Daten speichern','resmio_i18n')); ?>" />
+		<input type="hidden" name="action" value="update" />
 <?php
 }
 /**
@@ -667,4 +698,26 @@ function get_resmio_api_day($day='7') {
 	return $dayVal;
 }
 endif;
+
+/**
+ * Function to lighten or darken hex colors
+ */
+function adjustBrightness($hex, $steps) {
+    // Steps should be between -255 and 255. Negative = darker, positive = lighter
+    $steps = max(-255, min(255, $steps));
+    // Normalize into a six character long hex string
+    $hex = str_replace('#', '', $hex);
+    if (strlen($hex) == 3) {
+        $hex = str_repeat(substr($hex,0,1), 2).str_repeat(substr($hex,1,1), 2).str_repeat(substr($hex,2,1), 2);
+    }
+    // Split into three parts: R, G and B
+    $color_parts = str_split($hex, 2);
+    $output = '#';
+    foreach ($color_parts as $color) {
+        $color   = hexdec($color); // Convert to decimal
+        $color   = max(0,min(255,$color + $steps)); // Adjust color
+        $output .= str_pad(dechex($color), 2, '0', STR_PAD_LEFT); // Make two char hex code
+    }
+    return $output;
+}
 ?>
